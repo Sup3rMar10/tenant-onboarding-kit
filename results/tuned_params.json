@@ -1,0 +1,18 @@
+{
+ "mapper": {
+  "w_header": 1.0,
+  "w_value": 1.0,
+  "w_rel": 0.5,
+  "w_file": 0.0,
+  "threshold": 0.35,
+  "header_prior": 0.55,
+  "one_per_entity": true,
+  "ignore_factor": 1.0,
+  "date_rule": true,
+  "magnitude_rule": true,
+  "residual_rule": false,
+  "review_below": 0.7,
+  "review_margin": 0.1
+ },
+ "drift_rename_threshold": 0.7
+}

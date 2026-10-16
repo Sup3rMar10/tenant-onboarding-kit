@@ -1,0 +1,827 @@
+{
+ "meta": {
+  "version": "0.1.0",
+  "tenants": 40,
+  "tuning": [
+   "t00",
+   "t02",
+   "t03",
+   "t04",
+   "t08",
+   "t12",
+   "t13",
+   "t14",
+   "t15",
+   "t20",
+   "t21",
+   "t22",
+   "t24",
+   "t26",
+   "t28",
+   "t29",
+   "t30",
+   "t34",
+   "t37",
+   "t38"
+  ],
+  "heldout": [
+   "t01",
+   "t05",
+   "t06",
+   "t07",
+   "t09",
+   "t10",
+   "t11",
+   "t16",
+   "t17",
+   "t18",
+   "t19",
+   "t23",
+   "t25",
+   "t27",
+   "t31",
+   "t32",
+   "t33",
+   "t35",
+   "t36",
+   "t39"
+  ],
+  "gen_seed": 7,
+  "split_seed": 20261016,
+  "python": "3.13.13",
+  "lexicon_coverage": {
+   "columns": 659,
+   "no_known_token": 157,
+   "share": 0.238
+  },
+  "tuned_params": {
+   "w_header": 1.0,
+   "w_value": 1.0,
+   "w_rel": 0.5,
+   "w_file": 0.0,
+   "threshold": 0.35,
+   "header_prior": 0.55,
+   "one_per_entity": true,
+   "ignore_factor": 1.0,
+   "date_rule": true,
+   "magnitude_rule": true,
+   "residual_rule": false,
+   "review_below": 0.7,
+   "review_margin": 0.1
+  },
+  "drift_rename_threshold": 0.7,
+  "baseline_params": {
+   "header only": {
+    "w_header": 1.0,
+    "w_value": 0.0,
+    "w_rel": 0.0,
+    "w_file": 0.0,
+    "threshold": 0.2,
+    "header_prior": 0.0,
+    "one_per_entity": false,
+    "ignore_factor": 1.0,
+    "date_rule": false,
+    "magnitude_rule": false,
+    "residual_rule": false,
+    "review_below": 0.7,
+    "review_margin": 0.1
+   },
+   "value only": {
+    "w_header": 0.0,
+    "w_value": 1.0,
+    "w_rel": 0.0,
+    "w_file": 0.0,
+    "threshold": 0.2,
+    "header_prior": 0.55,
+    "one_per_entity": false,
+    "ignore_factor": 1.0,
+    "date_rule": false,
+    "magnitude_rule": false,
+    "residual_rule": false,
+    "review_below": 0.7,
+    "review_margin": 0.1
+   },
+   "header + value": {
+    "w_header": 1.0,
+    "w_value": 1.0,
+    "w_rel": 0.0,
+    "w_file": 0.0,
+    "threshold": 0.4,
+    "header_prior": 0.55,
+    "one_per_entity": false,
+    "ignore_factor": 1.0,
+    "date_rule": false,
+    "magnitude_rule": false,
+    "residual_rule": false,
+    "review_below": 0.7,
+    "review_margin": 0.1
+   }
+  },
+  "dev": false,
+  "runtime_s": 119.6
+ },
+ "mapping_tuning_split": {
+  "naive (exact header)": {
+   "overall": {
+    "precision": 0.963,
+    "recall": 0.0785,
+    "f1": 0.1453,
+    "entity_accuracy": 0.6333,
+    "column_accuracy": 0.3052,
+    "tenants": 20,
+    "columns_mapped": 27,
+    "columns_true": 331
+   },
+   "f1_ci": [
+    0.0769,
+    0.2187
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 0.1789,
+     "f1": 0.3034,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.2574,
+     "tenants": 7,
+     "columns_mapped": 22,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "entity_accuracy": 0.4444,
+     "column_accuracy": 0.3677,
+     "tenants": 6,
+     "columns_mapped": 0,
+     "columns_true": 98
+    },
+    "medium": {
+     "precision": 0.8,
+     "recall": 0.0364,
+     "f1": 0.0696,
+     "entity_accuracy": 0.4286,
+     "column_accuracy": 0.2838,
+     "tenants": 7,
+     "columns_mapped": 5,
+     "columns_true": 110
+    }
+   }
+  },
+  "header only": {
+   "overall": {
+    "precision": 0.9636,
+    "recall": 0.719,
+    "f1": 0.8235,
+    "entity_accuracy": 0.9167,
+    "column_accuracy": 0.7722,
+    "tenants": 20,
+    "columns_mapped": 247,
+    "columns_true": 331
+   },
+   "f1_ci": [
+    0.7093,
+    0.9199
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.7742,
+     "recall": 0.2449,
+     "f1": 0.3721,
+     "entity_accuracy": 0.7222,
+     "column_accuracy": 0.4839,
+     "tenants": 6,
+     "columns_mapped": 31,
+     "columns_true": 98
+    },
+    "medium": {
+     "precision": 0.9785,
+     "recall": 0.8273,
+     "f1": 0.8966,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.8649,
+     "tenants": 7,
+     "columns_mapped": 93,
+     "columns_true": 110
+    }
+   }
+  },
+  "value only": {
+   "overall": {
+    "precision": 0.6994,
+    "recall": 0.71,
+    "f1": 0.7046,
+    "entity_accuracy": 0.9167,
+    "column_accuracy": 0.713,
+    "tenants": 20,
+    "columns_mapped": 336,
+    "columns_true": 331
+   },
+   "f1_ci": [
+    0.6475,
+    0.7606
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 0.7967,
+     "recall": 0.7967,
+     "f1": 0.7967,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.7941,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.6495,
+     "recall": 0.6429,
+     "f1": 0.6462,
+     "entity_accuracy": 0.9444,
+     "column_accuracy": 0.6839,
+     "tenants": 6,
+     "columns_mapped": 97,
+     "columns_true": 98
+    },
+    "medium": {
+     "precision": 0.6379,
+     "recall": 0.6727,
+     "f1": 0.6549,
+     "entity_accuracy": 0.8095,
+     "column_accuracy": 0.6689,
+     "tenants": 7,
+     "columns_mapped": 116,
+     "columns_true": 110
+    }
+   }
+  },
+  "header + value": {
+   "overall": {
+    "precision": 0.9182,
+    "recall": 0.9154,
+    "f1": 0.9168,
+    "entity_accuracy": 0.9667,
+    "column_accuracy": 0.9066,
+    "tenants": 20,
+    "columns_mapped": 330,
+    "columns_true": 331
+   },
+   "f1_ci": [
+    0.8519,
+    0.9684
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.7812,
+     "recall": 0.7653,
+     "f1": 0.7732,
+     "entity_accuracy": 0.8889,
+     "column_accuracy": 0.7935,
+     "tenants": 6,
+     "columns_mapped": 96,
+     "columns_true": 98
+    },
+    "medium": {
+     "precision": 0.9459,
+     "recall": 0.9545,
+     "f1": 0.9502,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.9392,
+     "tenants": 7,
+     "columns_mapped": 111,
+     "columns_true": 110
+    }
+   }
+  },
+  "tuned (all signals)": {
+   "overall": {
+    "precision": 0.9909,
+    "recall": 0.9879,
+    "f1": 0.9894,
+    "entity_accuracy": 1.0,
+    "column_accuracy": 0.9841,
+    "tenants": 20,
+    "columns_mapped": 330,
+    "columns_true": 331
+   },
+   "f1_ci": [
+    0.9789,
+    0.9985
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.9896,
+     "recall": 0.9694,
+     "f1": 0.9794,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.9742,
+     "tenants": 6,
+     "columns_mapped": 96,
+     "columns_true": 98
+    },
+    "medium": {
+     "precision": 0.982,
+     "recall": 0.9909,
+     "f1": 0.9864,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.9797,
+     "tenants": 7,
+     "columns_mapped": 111,
+     "columns_true": 110
+    }
+   }
+  }
+ },
+ "mapping": {
+  "naive (exact header)": {
+   "overall": {
+    "precision": 1.0,
+    "recall": 0.1189,
+    "f1": 0.2125,
+    "entity_accuracy": 0.6667,
+    "column_accuracy": 0.3356,
+    "tenants": 20,
+    "columns_mapped": 39,
+    "columns_true": 328
+   },
+   "f1_ci": [
+    0.1239,
+    0.2974
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 0.2276,
+     "f1": 0.3709,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.2803,
+     "tenants": 7,
+     "columns_mapped": 28,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 1.0,
+     "recall": 0.0112,
+     "f1": 0.0222,
+     "entity_accuracy": 0.4444,
+     "column_accuracy": 0.3803,
+     "tenants": 6,
+     "columns_mapped": 1,
+     "columns_true": 89
+    },
+    "medium": {
+     "precision": 1.0,
+     "recall": 0.0862,
+     "f1": 0.1587,
+     "entity_accuracy": 0.5238,
+     "column_accuracy": 0.3416,
+     "tenants": 7,
+     "columns_mapped": 10,
+     "columns_true": 116
+    }
+   }
+  },
+  "header only": {
+   "overall": {
+    "precision": 0.952,
+    "recall": 0.7866,
+    "f1": 0.8614,
+    "entity_accuracy": 0.9167,
+    "column_accuracy": 0.8207,
+    "tenants": 20,
+    "columns_mapped": 271,
+    "columns_true": 328
+   },
+   "f1_ci": [
+    0.7756,
+    0.9317
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.8261,
+     "recall": 0.427,
+     "f1": 0.563,
+     "entity_accuracy": 0.7222,
+     "column_accuracy": 0.6056,
+     "tenants": 6,
+     "columns_mapped": 46,
+     "columns_true": 89
+    },
+    "medium": {
+     "precision": 0.951,
+     "recall": 0.8362,
+     "f1": 0.8899,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.8634,
+     "tenants": 7,
+     "columns_mapped": 102,
+     "columns_true": 116
+    }
+   }
+  },
+  "value only": {
+   "overall": {
+    "precision": 0.7075,
+    "recall": 0.7226,
+    "f1": 0.7149,
+    "entity_accuracy": 0.9333,
+    "column_accuracy": 0.708,
+    "tenants": 20,
+    "columns_mapped": 335,
+    "columns_true": 328
+   },
+   "f1_ci": [
+    0.6537,
+    0.7773
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 0.813,
+     "recall": 0.813,
+     "f1": 0.813,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.803,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.5851,
+     "recall": 0.618,
+     "f1": 0.6011,
+     "entity_accuracy": 0.8889,
+     "column_accuracy": 0.6127,
+     "tenants": 6,
+     "columns_mapped": 94,
+     "columns_true": 89
+    },
+    "medium": {
+     "precision": 0.6949,
+     "recall": 0.7069,
+     "f1": 0.7009,
+     "entity_accuracy": 0.9048,
+     "column_accuracy": 0.7143,
+     "tenants": 7,
+     "columns_mapped": 118,
+     "columns_true": 116
+    }
+   }
+  },
+  "header + value": {
+   "overall": {
+    "precision": 0.8922,
+    "recall": 0.9085,
+    "f1": 0.9003,
+    "entity_accuracy": 0.95,
+    "column_accuracy": 0.8805,
+    "tenants": 20,
+    "columns_mapped": 334,
+    "columns_true": 328
+   },
+   "f1_ci": [
+    0.8312,
+    0.9613
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.7447,
+     "recall": 0.7865,
+     "f1": 0.765,
+     "entity_accuracy": 0.8889,
+     "column_accuracy": 0.7746,
+     "tenants": 6,
+     "columns_mapped": 94,
+     "columns_true": 89
+    },
+    "medium": {
+     "precision": 0.8974,
+     "recall": 0.9052,
+     "f1": 0.9013,
+     "entity_accuracy": 0.9524,
+     "column_accuracy": 0.8758,
+     "tenants": 7,
+     "columns_mapped": 117,
+     "columns_true": 116
+    }
+   }
+  },
+  "tuned (all signals)": {
+   "overall": {
+    "precision": 0.9878,
+    "recall": 0.9909,
+    "f1": 0.9893,
+    "entity_accuracy": 1.0,
+    "column_accuracy": 0.9839,
+    "tenants": 20,
+    "columns_mapped": 329,
+    "columns_true": 328
+   },
+   "f1_ci": [
+    0.9782,
+    0.9985
+   ],
+   "by_difficulty": {
+    "easy": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 1.0,
+     "tenants": 7,
+     "columns_mapped": 123,
+     "columns_true": 123
+    },
+    "hard": {
+     "precision": 0.9667,
+     "recall": 0.9775,
+     "f1": 0.9721,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.9648,
+     "tenants": 6,
+     "columns_mapped": 90,
+     "columns_true": 89
+    },
+    "medium": {
+     "precision": 0.9914,
+     "recall": 0.9914,
+     "f1": 0.9914,
+     "entity_accuracy": 1.0,
+     "column_accuracy": 0.9876,
+     "tenants": 7,
+     "columns_mapped": 116,
+     "columns_true": 116
+    }
+   }
+  }
+ },
+ "ablation": {
+  "no header signal": {
+   "f1": 0.9268,
+   "delta_vs_full": -0.0625,
+   "delta_ci": [
+    -0.0895,
+    -0.0353
+   ],
+   "precision": 0.9268,
+   "recall": 0.9268
+  },
+  "no value signal": {
+   "f1": 0.8437,
+   "delta_vs_full": -0.1456,
+   "delta_ci": [
+    -0.2238,
+    -0.0793
+   ],
+   "precision": 0.8171,
+   "recall": 0.872
+  },
+  "no relation signal": {
+   "f1": 0.965,
+   "delta_vs_full": -0.0243,
+   "delta_ci": [
+    -0.043,
+    -0.009
+   ],
+   "precision": 0.9635,
+   "recall": 0.9665
+  },
+  "no one-file-per-entity": {
+   "f1": 0.9467,
+   "delta_vs_full": -0.0426,
+   "delta_ci": [
+    -0.095,
+    0.0
+   ],
+   "precision": 0.9453,
+   "recall": 0.9482
+  },
+  "no date rule": {
+   "f1": 0.9667,
+   "delta_vs_full": -0.0226,
+   "delta_ci": [
+    -0.0463,
+    -0.0057
+   ],
+   "precision": 0.9608,
+   "recall": 0.9726
+  },
+  "no magnitude rule": {
+   "f1": 0.9833,
+   "delta_vs_full": -0.006,
+   "delta_ci": [
+    -0.0152,
+    0.0
+   ],
+   "precision": 0.9818,
+   "recall": 0.9848
+  }
+ },
+ "review": {
+  "columns_mapped": 329,
+  "flagged_for_review": 21,
+  "flagged_share": 0.0638,
+  "wrong_predictions": 4,
+  "wrong_caught_by_flags": 0.0,
+  "precision_of_unflagged": 0.987
+ },
+ "normalization": {
+  "predicted_mapping": {
+   "record_recall": 0.9514,
+   "field_accuracy": 0.9909,
+   "false_loads": 116,
+   "junk_rows_held_back": 1.0,
+   "field_errors": {
+    "invoice.status": 119,
+    "customer.country": 63,
+    "customer.created_date": 46,
+    "payment.method": 43
+   }
+  },
+  "oracle_mapping": {
+   "record_recall": 1.0,
+   "field_accuracy": 0.9928,
+   "false_loads": 0,
+   "junk_rows_held_back": 1.0,
+   "field_errors": {
+    "invoice.status": 119,
+    "customer.country": 63,
+    "payment.method": 43
+   }
+  }
+ },
+ "drift": {
+  "predicted_mapping": {
+   "events_true": 68,
+   "precision": 1.0,
+   "recall": 0.9853,
+   "f1": 0.9926,
+   "recall_by_kind": {
+    "added": {
+     "found": 11,
+     "of": 11
+    },
+    "dropped_optional": {
+     "found": 6,
+     "of": 6
+    },
+    "dropped_required": {
+     "found": 6,
+     "of": 6
+    },
+    "renamed": {
+     "found": 13,
+     "of": 13
+    },
+    "retyped_format": {
+     "found": 17,
+     "of": 17
+    },
+    "retyped_incompatible": {
+     "found": 14,
+     "of": 15
+    }
+   },
+   "sync_decision_accuracy": 1.0,
+   "syncs": 20,
+   "unsafe_misses": 0,
+   "should_block": 17,
+   "control_syncs": 20,
+   "control_false_alarms": 0,
+   "control_syncs_with_alarm": 0,
+   "control_false_blocks": 0,
+   "ungated_load_would_corrupt": {
+    "fields_wrong": 1784,
+    "fields": 18475,
+    "syncs": 17
+   }
+  },
+  "oracle_mapping": {
+   "events_true": 68,
+   "precision": 1.0,
+   "recall": 0.9853,
+   "f1": 0.9926,
+   "recall_by_kind": {
+    "added": {
+     "found": 11,
+     "of": 11
+    },
+    "dropped_optional": {
+     "found": 6,
+     "of": 6
+    },
+    "dropped_required": {
+     "found": 6,
+     "of": 6
+    },
+    "renamed": {
+     "found": 13,
+     "of": 13
+    },
+    "retyped_format": {
+     "found": 17,
+     "of": 17
+    },
+    "retyped_incompatible": {
+     "found": 14,
+     "of": 15
+    }
+   },
+   "sync_decision_accuracy": 1.0,
+   "syncs": 20,
+   "unsafe_misses": 0,
+   "should_block": 17,
+   "control_syncs": 20,
+   "control_false_alarms": 0,
+   "control_syncs_with_alarm": 0,
+   "control_false_blocks": 0,
+   "ungated_load_would_corrupt": {
+    "fields_wrong": 1790,
+    "fields": 18780,
+    "syncs": 17
+   }
+  },
+  "rename_threshold": 0.7
+ },
+ "ingest": {
+  "checks": 100,
+  "passed": 100,
+  "by_check": {
+   "idempotent": {
+    "passed": 20,
+    "of": 20,
+    "scenario_occurred": 20
+   },
+   "incremental": {
+    "passed": 20,
+    "of": 20,
+    "scenario_occurred": 20
+   },
+   "dry_run": {
+    "passed": 20,
+    "of": 20,
+    "scenario_occurred": 20
+   },
+   "crash_and_resume": {
+    "passed": 20,
+    "of": 20,
+    "scenario_occurred": 20
+   },
+   "rollback": {
+    "passed": 20,
+    "of": 20,
+    "scenario_occurred": 20
+   }
+  },
+  "failures": []
+ }
+}

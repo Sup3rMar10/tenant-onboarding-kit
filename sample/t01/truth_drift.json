@@ -1,0 +1,2353 @@
+{
+ "files": {
+  "clients.csv": {
+   "entity": "customer",
+   "columns": {
+    "companyName": "customer.name",
+    "kundennummer": "customer.customer_id",
+    "memo": null,
+    "C3": "customer.email",
+    "land": "customer.country",
+    "fecha_alta": "customer.created_date"
+   },
+   "kind": "csv",
+   "encoding": "latin-1",
+   "delimiter": ",",
+   "layout": "flat"
+  },
+  "factures.csv": {
+   "entity": "invoice",
+   "columns": {
+    "status": "invoice.status",
+    "runId": null,
+    "invoiceNumber": "invoice.invoice_id",
+    "total": "invoice.amount",
+    "idCliente": "invoice.customer_id",
+    "C3": "invoice.invoice_date",
+    "purchaseOrder": null,
+    "vencimiento": "invoice.due_date"
+   },
+   "kind": "csv",
+   "encoding": "latin-1",
+   "delimiter": ",",
+   "layout": "flat"
+  },
+  "paiements.csv": {
+   "entity": "payment",
+   "columns": {
+    "settledOn": "payment.payment_date",
+    "importBatch": null,
+    "invoice": "payment.invoice_id",
+    "etag": null,
+    "zahlungsnummer": "payment.payment_id",
+    "howPaid": "payment.method",
+    "amt": "payment.amount",
+    "cur": null
+   },
+   "kind": "csv",
+   "encoding": "latin-1",
+   "delimiter": ",",
+   "layout": "flat"
+  }
+ },
+ "records": {
+  "customer": [
+   {
+    "customer_id": "KD01070",
+    "name": "Apex Logistics Ltd",
+    "email": "billing@apexlogistic40.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2024-09-03"
+   },
+   {
+    "customer_id": "KD01067",
+    "name": "Vertex, Industries & Co.",
+    "email": "ap@vertexindust38.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2019-01-27"
+   },
+   {
+    "customer_id": "KD01028",
+    "name": "Umbrella Industries AG",
+    "email": "accounts@umbrellaindu15.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2019-01-28"
+   },
+   {
+    "customer_id": "KD01056",
+    "name": "Nakatomi Works Ltd",
+    "email": "accounts@nakatomiwork31.example",
+    "phone": null,
+    "country": "BR",
+    "created_date": "2021-04-28"
+   },
+   {
+    "customer_id": "KD01055",
+    "name": "Redwood Labs Ltd",
+    "email": "finance@redwoodlabsl30.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2024-03-07"
+   },
+   {
+    "customer_id": "KD01011",
+    "name": "Juniper, Trading & Co.",
+    "email": "ap@junipertradi5.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2021-02-03"
+   },
+   {
+    "customer_id": "KD01062",
+    "name": "Wayne Labs S.p.A.",
+    "email": "accounts@waynelabsspa35.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2019-05-26"
+   },
+   {
+    "customer_id": "KD01019",
+    "name": "Cobalt Systems GmbH",
+    "email": null,
+    "phone": null,
+    "country": "AT",
+    "created_date": "2021-10-28"
+   },
+   {
+    "customer_id": "KD01021",
+    "name": "Monarch Partners Ltd",
+    "email": "billing@monarchpartn12.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2022-04-11"
+   },
+   {
+    "customer_id": "KD21001",
+    "name": "Bluth, Newco 1",
+    "email": "ap1@newco1.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2019-06-28"
+   },
+   {
+    "customer_id": "KD01052",
+    "name": "Bluth Trading Ltd",
+    "email": "accounts@bluthtrading28.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2019-05-09"
+   },
+   {
+    "customer_id": "KD01061",
+    "name": "Sterling Energy S.r.l.",
+    "email": "finance@sterlingener34.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2023-07-04"
+   },
+   {
+    "customer_id": "KD01054",
+    "name": "Peña Hermanos SL",
+    "email": "accounts@peahermanoss29.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2019-01-17"
+   },
+   {
+    "customer_id": "KD01033",
+    "name": "Lumen Industries Ltd",
+    "email": "billing@lumenindustr19.example",
+    "phone": null,
+    "country": "SE",
+    "created_date": "2022-01-02"
+   },
+   {
+    "customer_id": "KD01066",
+    "name": "Meridian, Health & Co.",
+    "email": "ap@meridianheal37.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2019-11-11"
+   },
+   {
+    "customer_id": "KD21000",
+    "name": "Pioneer Newco 0",
+    "email": "ap0@newco0.example",
+    "phone": null,
+    "country": "SE",
+    "created_date": "2024-08-03"
+   },
+   {
+    "customer_id": "KD01015",
+    "name": "Sterling Energy GmbH",
+    "email": "finance@sterlingener8.example",
+    "phone": null,
+    "country": "AT",
+    "created_date": "2023-04-21"
+   },
+   {
+    "customer_id": "KD21007",
+    "name": "Hooli Newco 7",
+    "email": "ap7@newco7.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2022-07-13"
+   },
+   {
+    "customer_id": "KD01071",
+    "name": "Kestrel Supply SA",
+    "email": "finance@kestrelsuppl41.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2022-11-08"
+   },
+   {
+    "customer_id": "KD01024",
+    "name": "Bäckerei Schröder KG",
+    "email": "accounts@bckereischrd13.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2023-09-18"
+   },
+   {
+    "customer_id": "KD01044",
+    "name": "Northwind, Media & Co.",
+    "email": "billing@northwindmed25.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2020-04-02"
+   },
+   {
+    "customer_id": "KD21004",
+    "name": "Pioneer, Newco 4",
+    "email": "ap4@newco4.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2019-02-11"
+   },
+   {
+    "customer_id": "KD01042",
+    "name": "Summit, Health & Co.",
+    "email": "ap@summithealth23.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2025-04-01"
+   },
+   {
+    "customer_id": "KD01069",
+    "name": "Zenith Logistics SA",
+    "email": "ap@zenithlogist39.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2023-08-08"
+   },
+   {
+    "customer_id": "KD01074",
+    "name": "Pioneer Systems Ltd",
+    "email": "billing@pioneersyste42.example",
+    "phone": null,
+    "country": "SE",
+    "created_date": "2024-08-03"
+   },
+   {
+    "customer_id": "KD01046",
+    "name": "Pioneer, Foods & Co.",
+    "email": "accounts@pioneerfoods26.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2019-02-11"
+   },
+   {
+    "customer_id": "KD01013",
+    "name": "Granite Foods S.p.A.",
+    "email": "ap@granitefoods6.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2025-07-13"
+   },
+   {
+    "customer_id": "KD01031",
+    "name": "Lumen Systems SARL",
+    "email": "ap@lumensystems18.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-04-25"
+   },
+   {
+    "customer_id": "KD01005",
+    "name": "Beacon, Foods & Co.",
+    "email": "finance@beaconfoodsc2.example",
+    "phone": null,
+    "country": "AU",
+    "created_date": "2022-12-18"
+   },
+   {
+    "customer_id": "KD01027",
+    "name": "Falcon Trading Ltd",
+    "email": "ap@falcontradin14.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2025-06-25"
+   },
+   {
+    "customer_id": "KD01058",
+    "name": "Quanta Media Ltd",
+    "email": null,
+    "phone": null,
+    "country": "PL",
+    "created_date": "2023-02-21"
+   },
+   {
+    "customer_id": "KD01008",
+    "name": "Meridian Logistics LLC",
+    "email": "accounts@meridianlogi4.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2020-04-28"
+   },
+   {
+    "customer_id": "KD01059",
+    "name": "Wonka Trading PLC",
+    "email": "accounts@wonkatrading33.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2024-08-24"
+   },
+   {
+    "customer_id": "KD01014",
+    "name": "Pioneer, Trading & Co.",
+    "email": "ap@pioneertradi7.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2021-08-18"
+   },
+   {
+    "customer_id": "KD21006",
+    "name": "Initech Newco 6",
+    "email": "ap6@newco6.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2020-06-29"
+   },
+   {
+    "customer_id": "KD01049",
+    "name": "Summit Trading Ltd",
+    "email": "finance@summittradin27.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2022-11-10"
+   },
+   {
+    "customer_id": "KD01077",
+    "name": "Apex Media Ltd",
+    "email": "billing@apexmedialtd43.example",
+    "phone": null,
+    "country": "AU",
+    "created_date": "2020-07-31"
+   },
+   {
+    "customer_id": "KD01016",
+    "name": "Weyland Media Ltd",
+    "email": "billing@weylandmedia9.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2019-01-19"
+   },
+   {
+    "customer_id": "KD21002",
+    "name": "Beacon, Newco 2",
+    "email": "ap2@newco2.example",
+    "phone": null,
+    "country": "AU",
+    "created_date": "2022-12-18"
+   },
+   {
+    "customer_id": "KD01018",
+    "name": "Wonka Logistics Ltd",
+    "email": "finance@wonkalogisti10.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2024-11-12"
+   },
+   {
+    "customer_id": "KD01029",
+    "name": "Lumen Systems PLC",
+    "email": "ap@lumensystems16.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2021-03-01"
+   },
+   {
+    "customer_id": "KD01030",
+    "name": "Tundra Energy SARL",
+    "email": "billing@tundraenergy17.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-03-12"
+   },
+   {
+    "customer_id": "KD01006",
+    "name": "Lumen Systems Inc",
+    "email": "billing@lumensystems3.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2023-03-04"
+   },
+   {
+    "customer_id": "KD21003",
+    "name": "Meridian, Newco 3",
+    "email": "ap3@newco3.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2019-11-11"
+   },
+   {
+    "customer_id": "KD21005",
+    "name": "Tundra Newco 5",
+    "email": "ap5@newco5.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-03-12"
+   },
+   {
+    "customer_id": "KD01001",
+    "name": "Bluth, Logistics & Co.",
+    "email": "accounts@bluthlogisti0.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2019-06-28"
+   },
+   {
+    "customer_id": "KD01041",
+    "name": "Nimbus, Logistics & Co.",
+    "email": "accounts@nimbuslogist22.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2023-01-06"
+   },
+   {
+    "customer_id": "KD01063",
+    "name": "Umbrella Partners NV",
+    "email": "ap@umbrellapart36.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2023-12-03"
+   },
+   {
+    "customer_id": "KD01038",
+    "name": "Sterling Partners SARL",
+    "email": "finance@sterlingpart21.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2022-10-17"
+   },
+   {
+    "customer_id": "KD01036",
+    "name": "Hooli Health LLC",
+    "email": "billing@hoolihealthl20.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2022-07-13"
+   },
+   {
+    "customer_id": "KD01043",
+    "name": "Nimbus Media Ltd",
+    "email": "ap@nimbusmedial24.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2019-11-15"
+   },
+   {
+    "customer_id": "KD01080",
+    "name": "Initech Trading Corp",
+    "email": "billing@initechtradi44.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2020-06-29"
+   },
+   {
+    "customer_id": "KD01002",
+    "name": "Contoso Media AG",
+    "email": "finance@contosomedia1.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2020-06-25"
+   }
+  ],
+  "invoice": [
+   {
+    "invoice_id": "INV-040120",
+    "customer_id": "KD01038",
+    "invoice_date": "2025-11-23",
+    "due_date": "2026-01-22",
+    "currency": "GBP",
+    "amount": "16477.89",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040013",
+    "customer_id": "KD01031",
+    "invoice_date": "2025-05-12",
+    "due_date": "2025-06-11",
+    "currency": "GBP",
+    "amount": "18388.16",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-060011",
+    "customer_id": "KD01015",
+    "invoice_date": "2025-02-07",
+    "due_date": "2025-03-24",
+    "currency": "GBP",
+    "amount": "2107.93",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040172",
+    "customer_id": "KD01001",
+    "invoice_date": "2025-09-21",
+    "due_date": "2025-10-06",
+    "currency": "GBP",
+    "amount": "24320.47",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040189",
+    "customer_id": "KD01061",
+    "invoice_date": "2025-11-21",
+    "due_date": "2025-12-21",
+    "currency": "GBP",
+    "amount": "5718.00",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040021",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-03-19",
+    "due_date": "2025-04-18",
+    "currency": "GBP",
+    "amount": "1002.99",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-060009",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-06-28",
+    "due_date": null,
+    "currency": "GBP",
+    "amount": "14698.15",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060004",
+    "customer_id": "KD01056",
+    "invoice_date": "2025-03-24",
+    "due_date": "2025-05-23",
+    "currency": "GBP",
+    "amount": "17343.69",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040155",
+    "customer_id": "KD01043",
+    "invoice_date": "2025-03-09",
+    "due_date": "2025-05-08",
+    "currency": "GBP",
+    "amount": "24582.77",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040107",
+    "customer_id": "KD01071",
+    "invoice_date": "2025-08-05",
+    "due_date": "2025-08-20",
+    "currency": "GBP",
+    "amount": "22983.32",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040046",
+    "customer_id": "KD01061",
+    "invoice_date": "2025-07-14",
+    "due_date": "2025-07-29",
+    "currency": "GBP",
+    "amount": "8339.18",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040099",
+    "customer_id": "KD01018",
+    "invoice_date": "2025-09-29",
+    "due_date": "2025-11-28",
+    "currency": "GBP",
+    "amount": "23408.04",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040145",
+    "customer_id": "KD01036",
+    "invoice_date": "2025-06-26",
+    "due_date": "2025-08-25",
+    "currency": "GBP",
+    "amount": "21313.68",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040141",
+    "customer_id": "KD01052",
+    "invoice_date": "2025-11-27",
+    "due_date": "2025-12-27",
+    "currency": "GBP",
+    "amount": "6658.76",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040011",
+    "customer_id": "KD01006",
+    "invoice_date": "2025-07-28",
+    "due_date": "2025-08-27",
+    "currency": "GBP",
+    "amount": "1032.69",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-060007",
+    "customer_id": "KD01024",
+    "invoice_date": "2025-05-09",
+    "due_date": "2025-05-24",
+    "currency": "GBP",
+    "amount": "19368.00",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040093",
+    "customer_id": "KD01043",
+    "invoice_date": "2025-05-13",
+    "due_date": "2025-06-27",
+    "currency": "GBP",
+    "amount": "18364.75",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040128",
+    "customer_id": "KD01008",
+    "invoice_date": "2025-04-10",
+    "due_date": "2025-05-10",
+    "currency": "GBP",
+    "amount": "21096.41",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040140",
+    "customer_id": "KD01005",
+    "invoice_date": "2025-01-30",
+    "due_date": "2025-03-31",
+    "currency": "GBP",
+    "amount": "18747.09",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040142",
+    "customer_id": "KD01014",
+    "invoice_date": "2025-11-03",
+    "due_date": "2026-01-02",
+    "currency": "GBP",
+    "amount": "12078.79",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040185",
+    "customer_id": "KD01027",
+    "invoice_date": "2025-01-20",
+    "due_date": "2025-02-19",
+    "currency": "GBP",
+    "amount": "6501.13",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040108",
+    "customer_id": "KD01018",
+    "invoice_date": "2025-03-08",
+    "due_date": "2025-04-07",
+    "currency": "GBP",
+    "amount": "19670.83",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040188",
+    "customer_id": "KD01056",
+    "invoice_date": "2025-06-14",
+    "due_date": "2025-07-29",
+    "currency": "GBP",
+    "amount": "22665.35",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040101",
+    "customer_id": "KD01030",
+    "invoice_date": "2025-02-22",
+    "due_date": "2025-04-23",
+    "currency": "GBP",
+    "amount": "20676.76",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040077",
+    "customer_id": "KD01030",
+    "invoice_date": "2025-11-16",
+    "due_date": "2025-12-01",
+    "currency": "GBP",
+    "amount": "17268.05",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040050",
+    "customer_id": "KD01001",
+    "invoice_date": "2025-08-17",
+    "due_date": "2025-09-16",
+    "currency": "GBP",
+    "amount": "168.80",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040061",
+    "customer_id": "KD01030",
+    "invoice_date": "2025-06-23",
+    "due_date": "2025-07-08",
+    "currency": "GBP",
+    "amount": "22256.56",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040029",
+    "customer_id": "KD01019",
+    "invoice_date": "2025-09-15",
+    "due_date": "2025-10-30",
+    "currency": "GBP",
+    "amount": "13139.30",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040161",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-04-19",
+    "due_date": "2025-06-18",
+    "currency": "GBP",
+    "amount": "15214.98",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-060014",
+    "customer_id": "KD01021",
+    "invoice_date": "2025-03-23",
+    "due_date": "2025-05-07",
+    "currency": "GBP",
+    "amount": "11865.16",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040169",
+    "customer_id": "KD01070",
+    "invoice_date": "2025-07-18",
+    "due_date": "2025-09-01",
+    "currency": "GBP",
+    "amount": "4139.14",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040040",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-03-24",
+    "due_date": "2025-05-23",
+    "currency": "GBP",
+    "amount": "10304.47",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040086",
+    "customer_id": "KD01031",
+    "invoice_date": "2025-10-12",
+    "due_date": "2025-12-11",
+    "currency": "GBP",
+    "amount": "20437.50",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040160",
+    "customer_id": "KD01049",
+    "invoice_date": "2025-09-26",
+    "due_date": "2025-10-11",
+    "currency": "GBP",
+    "amount": "22153.03",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-060005",
+    "customer_id": "KD21006",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-07-20",
+    "currency": "GBP",
+    "amount": "14138.63",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040195",
+    "customer_id": "KD01041",
+    "invoice_date": "2025-09-29",
+    "due_date": "2025-10-29",
+    "currency": "GBP",
+    "amount": "4072.89",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040062",
+    "customer_id": "KD01011",
+    "invoice_date": "2025-06-14",
+    "due_date": "2025-07-29",
+    "currency": "GBP",
+    "amount": "16610.60",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040060",
+    "customer_id": "KD01043",
+    "invoice_date": "2025-05-25",
+    "due_date": "2025-06-09",
+    "currency": "GBP",
+    "amount": "14550.07",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040144",
+    "customer_id": "KD01067",
+    "invoice_date": "2025-03-25",
+    "due_date": "2025-04-09",
+    "currency": "GBP",
+    "amount": "3116.71",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040015",
+    "customer_id": "KD01005",
+    "invoice_date": "2025-08-22",
+    "due_date": "2025-09-06",
+    "currency": "GBP",
+    "amount": "16742.80",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060002",
+    "customer_id": "KD01063",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-09-03",
+    "currency": "GBP",
+    "amount": "24844.34",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040076",
+    "customer_id": "KD01052",
+    "invoice_date": "2025-07-04",
+    "due_date": "2025-07-19",
+    "currency": "GBP",
+    "amount": "22821.07",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040156",
+    "customer_id": "KD01021",
+    "invoice_date": "2025-04-10",
+    "due_date": "2025-06-09",
+    "currency": "GBP",
+    "amount": "8669.82",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040104",
+    "customer_id": "KD01059",
+    "invoice_date": "2025-01-06",
+    "due_date": "2025-02-05",
+    "currency": "GBP",
+    "amount": "11109.30",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040138",
+    "customer_id": "KD01080",
+    "invoice_date": "2025-04-19",
+    "due_date": "2025-05-19",
+    "currency": "GBP",
+    "amount": "1208.65",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040159",
+    "customer_id": "KD01001",
+    "invoice_date": "2025-04-11",
+    "due_date": "2025-06-10",
+    "currency": "GBP",
+    "amount": "17331.15",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040016",
+    "customer_id": "KD01031",
+    "invoice_date": "2025-03-03",
+    "due_date": "2025-05-02",
+    "currency": "GBP",
+    "amount": "12584.84",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040209",
+    "customer_id": "KD01030",
+    "invoice_date": "2025-10-19",
+    "due_date": "2025-11-18",
+    "currency": "GBP",
+    "amount": "12740.57",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040133",
+    "customer_id": "KD01019",
+    "invoice_date": "2025-04-26",
+    "due_date": "2025-05-11",
+    "currency": "GBP",
+    "amount": "2849.69",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040148",
+    "customer_id": "KD01058",
+    "invoice_date": "2025-05-10",
+    "due_date": "2025-05-25",
+    "currency": "GBP",
+    "amount": "9091.98",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040199",
+    "customer_id": "KD01058",
+    "invoice_date": "2025-09-04",
+    "due_date": "2025-10-19",
+    "currency": "GBP",
+    "amount": "14252.08",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-060006",
+    "customer_id": "KD01071",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-09-03",
+    "currency": "GBP",
+    "amount": "21005.79",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060008",
+    "customer_id": "KD01031",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "GBP",
+    "amount": "10271.83",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060010",
+    "customer_id": "KD01056",
+    "invoice_date": "2025-09-04",
+    "due_date": "2025-10-19",
+    "currency": "GBP",
+    "amount": "23448.94",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040083",
+    "customer_id": "KD01041",
+    "invoice_date": "2025-07-02",
+    "due_date": "2025-08-01",
+    "currency": "GBP",
+    "amount": "8560.31",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040210",
+    "customer_id": "KD01018",
+    "invoice_date": "2025-02-07",
+    "due_date": null,
+    "currency": "GBP",
+    "amount": "19913.70",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040096",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-05-31",
+    "due_date": "2025-07-15",
+    "currency": "GBP",
+    "amount": "405.35",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040103",
+    "customer_id": "KD01049",
+    "invoice_date": "2025-06-23",
+    "due_date": "2025-08-07",
+    "currency": "GBP",
+    "amount": "17766.73",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060003",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-11-03",
+    "due_date": "2026-01-02",
+    "currency": "GBP",
+    "amount": "9504.72",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040049",
+    "customer_id": "KD01054",
+    "invoice_date": "2025-03-02",
+    "due_date": "2025-04-16",
+    "currency": "GBP",
+    "amount": "19352.16",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040154",
+    "customer_id": "KD01008",
+    "invoice_date": "2025-10-18",
+    "due_date": "2025-11-02",
+    "currency": "GBP",
+    "amount": "2145.21",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040017",
+    "customer_id": "KD01049",
+    "invoice_date": "2025-05-20",
+    "due_date": "2025-07-04",
+    "currency": "GBP",
+    "amount": "10218.06",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040118",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-03-19",
+    "due_date": "2025-04-18",
+    "currency": "GBP",
+    "amount": "18879.77",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040137",
+    "customer_id": "KD01063",
+    "invoice_date": "2025-03-06",
+    "due_date": "2025-03-21",
+    "currency": "GBP",
+    "amount": "216.83",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040121",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-04-08",
+    "due_date": "2025-04-23",
+    "currency": "GBP",
+    "amount": "10913.91",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040069",
+    "customer_id": "KD01043",
+    "invoice_date": "2025-03-29",
+    "due_date": "2025-05-13",
+    "currency": "GBP",
+    "amount": "1777.52",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040038",
+    "customer_id": "KD01031",
+    "invoice_date": "2025-09-30",
+    "due_date": "2025-11-29",
+    "currency": "GBP",
+    "amount": "15840.76",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040019",
+    "customer_id": "KD01002",
+    "invoice_date": "2025-01-13",
+    "due_date": "2025-03-14",
+    "currency": "GBP",
+    "amount": "896.50",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040054",
+    "customer_id": "KD01033",
+    "invoice_date": "2025-05-04",
+    "due_date": "2025-07-03",
+    "currency": "GBP",
+    "amount": "5818.40",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040027",
+    "customer_id": "KD01056",
+    "invoice_date": "2025-02-20",
+    "due_date": "2025-04-21",
+    "currency": "GBP",
+    "amount": "4050.80",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040006",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-06-18",
+    "due_date": "2025-08-17",
+    "currency": "GBP",
+    "amount": "6586.80",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-060000",
+    "customer_id": "KD01027",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-09-03",
+    "currency": "GBP",
+    "amount": "14164.14",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040208",
+    "customer_id": "KD01008",
+    "invoice_date": "2025-05-09",
+    "due_date": "2025-05-24",
+    "currency": "GBP",
+    "amount": "3542.68",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040192",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-05-17",
+    "due_date": "2025-06-01",
+    "currency": "GBP",
+    "amount": "20716.07",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040127",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-07-01",
+    "due_date": "2025-08-30",
+    "currency": "GBP",
+    "amount": "9060.70",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040057",
+    "customer_id": "KD01069",
+    "invoice_date": "2025-11-14",
+    "due_date": "2026-01-13",
+    "currency": "GBP",
+    "amount": "11807.99",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040034",
+    "customer_id": "KD01070",
+    "invoice_date": "2025-05-19",
+    "due_date": "2025-06-03",
+    "currency": "GBP",
+    "amount": "17368.15",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040003",
+    "customer_id": "KD01055",
+    "invoice_date": "2025-08-10",
+    "due_date": "2025-09-09",
+    "currency": "GBP",
+    "amount": "14701.92",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040095",
+    "customer_id": "KD01054",
+    "invoice_date": "2025-04-23",
+    "due_date": "2025-06-07",
+    "currency": "GBP",
+    "amount": "22600.15",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040197",
+    "customer_id": "KD01018",
+    "invoice_date": "2025-07-29",
+    "due_date": "2025-08-28",
+    "currency": "GBP",
+    "amount": "1461.11",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040070",
+    "customer_id": "KD01033",
+    "invoice_date": "2025-05-18",
+    "due_date": "2025-07-02",
+    "currency": "GBP",
+    "amount": "20828.42",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040162",
+    "customer_id": "KD01062",
+    "invoice_date": "2025-02-06",
+    "due_date": "2025-03-08",
+    "currency": "GBP",
+    "amount": "9612.44",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040212",
+    "customer_id": "KD01024",
+    "invoice_date": "2025-03-23",
+    "due_date": "2025-05-07",
+    "currency": "GBP",
+    "amount": "2022.97",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040045",
+    "customer_id": "KD01055",
+    "invoice_date": "2025-03-16",
+    "due_date": "2025-05-15",
+    "currency": "GBP",
+    "amount": "11104.71",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040110",
+    "customer_id": "KD01049",
+    "invoice_date": "2025-06-28",
+    "due_date": "2025-08-27",
+    "currency": "GBP",
+    "amount": "17031.02",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040008",
+    "customer_id": "KD01069",
+    "invoice_date": "2025-04-11",
+    "due_date": "2025-04-26",
+    "currency": "GBP",
+    "amount": "2864.70",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040073",
+    "customer_id": "KD01062",
+    "invoice_date": "2025-08-10",
+    "due_date": "2025-09-24",
+    "currency": "GBP",
+    "amount": "4270.59",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040184",
+    "customer_id": "KD01005",
+    "invoice_date": "2025-06-24",
+    "due_date": "2025-07-09",
+    "currency": "GBP",
+    "amount": "9186.10",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040024",
+    "customer_id": "KD01002",
+    "invoice_date": "2025-09-01",
+    "due_date": "2025-10-01",
+    "currency": "GBP",
+    "amount": "24584.27",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040129",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-01-26",
+    "due_date": "2025-03-27",
+    "currency": "GBP",
+    "amount": "11023.17",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040202",
+    "customer_id": "KD01033",
+    "invoice_date": "2025-09-08",
+    "due_date": "2025-10-23",
+    "currency": "GBP",
+    "amount": "13792.33",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040203",
+    "customer_id": "KD01058",
+    "invoice_date": "2025-02-17",
+    "due_date": "2025-03-19",
+    "currency": "GBP",
+    "amount": "9635.92",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040092",
+    "customer_id": "KD01011",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-07-20",
+    "currency": "GBP",
+    "amount": "1124.15",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060012",
+    "customer_id": "KD21004",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "GBP",
+    "amount": "7035.83",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040094",
+    "customer_id": "KD01024",
+    "invoice_date": "2025-09-12",
+    "due_date": "2025-11-11",
+    "currency": "GBP",
+    "amount": "2188.01",
+    "status": null
+   },
+   {
+    "invoice_id": "INV-040097",
+    "customer_id": "KD01027",
+    "invoice_date": "2025-01-02",
+    "due_date": "2025-01-17",
+    "currency": "GBP",
+    "amount": "20123.03",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040051",
+    "customer_id": "KD01011",
+    "invoice_date": "2025-06-26",
+    "due_date": "2025-08-10",
+    "currency": "GBP",
+    "amount": "17646.72",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040215",
+    "customer_id": "KD01005",
+    "invoice_date": "2025-06-11",
+    "due_date": "2025-06-26",
+    "currency": "GBP",
+    "amount": "20161.75",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040039",
+    "customer_id": "KD01006",
+    "invoice_date": "2025-10-21",
+    "due_date": "2025-12-05",
+    "currency": "GBP",
+    "amount": "5415.40",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040028",
+    "customer_id": "KD01067",
+    "invoice_date": "2025-11-17",
+    "due_date": "2026-01-01",
+    "currency": "GBP",
+    "amount": "7051.59",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040080",
+    "customer_id": "KD01015",
+    "invoice_date": "2025-11-14",
+    "due_date": "2025-11-29",
+    "currency": "GBP",
+    "amount": "11749.76",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040115",
+    "customer_id": "KD01021",
+    "invoice_date": "2025-05-16",
+    "due_date": "2025-05-31",
+    "currency": "GBP",
+    "amount": "15081.24",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040177",
+    "customer_id": "KD01024",
+    "invoice_date": "2025-06-20",
+    "due_date": "2025-08-19",
+    "currency": "GBP",
+    "amount": "23335.51",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040064",
+    "customer_id": "KD01038",
+    "invoice_date": "2025-07-05",
+    "due_date": "2025-09-03",
+    "currency": "GBP",
+    "amount": "13347.17",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040176",
+    "customer_id": "KD01070",
+    "invoice_date": "2025-03-16",
+    "due_date": "2025-04-30",
+    "currency": "GBP",
+    "amount": "13009.34",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040163",
+    "customer_id": "KD01055",
+    "invoice_date": "2025-08-12",
+    "due_date": "2025-09-11",
+    "currency": "GBP",
+    "amount": "835.44",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040088",
+    "customer_id": "KD01070",
+    "invoice_date": "2025-09-12",
+    "due_date": "2025-09-27",
+    "currency": "GBP",
+    "amount": "15800.01",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040012",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-03-21",
+    "due_date": "2025-04-20",
+    "currency": "GBP",
+    "amount": "22195.08",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040026",
+    "customer_id": "KD01066",
+    "invoice_date": "2025-08-29",
+    "due_date": "2025-09-28",
+    "currency": "GBP",
+    "amount": "13406.11",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040091",
+    "customer_id": "KD01005",
+    "invoice_date": "2025-11-06",
+    "due_date": "2025-11-21",
+    "currency": "GBP",
+    "amount": "5204.75",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040116",
+    "customer_id": "KD01080",
+    "invoice_date": "2025-06-22",
+    "due_date": "2025-07-07",
+    "currency": "GBP",
+    "amount": "10918.21",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040166",
+    "customer_id": "KD01063",
+    "invoice_date": "2025-05-21",
+    "due_date": "2025-06-20",
+    "currency": "GBP",
+    "amount": "24165.83",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040178",
+    "customer_id": "KD01024",
+    "invoice_date": "2025-04-23",
+    "due_date": "2025-06-07",
+    "currency": "GBP",
+    "amount": "2215.36",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-060015",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-03-03",
+    "due_date": "2025-05-02",
+    "currency": "GBP",
+    "amount": "16041.71",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040125",
+    "customer_id": "KD01069",
+    "invoice_date": "2025-08-15",
+    "due_date": "2025-08-30",
+    "currency": "GBP",
+    "amount": "22403.79",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040132",
+    "customer_id": "KD01058",
+    "invoice_date": "2025-02-12",
+    "due_date": "2025-03-29",
+    "currency": "GBP",
+    "amount": "19688.62",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040042",
+    "customer_id": "KD01062",
+    "invoice_date": "2025-03-21",
+    "due_date": "2025-05-20",
+    "currency": "GBP",
+    "amount": "9957.87",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040020",
+    "customer_id": "KD01001",
+    "invoice_date": "2025-05-16",
+    "due_date": "2025-06-30",
+    "currency": "GBP",
+    "amount": "20781.02",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040124",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-08-26",
+    "due_date": "2025-09-10",
+    "currency": "GBP",
+    "amount": "9191.63",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040205",
+    "customer_id": "KD01028",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "GBP",
+    "amount": "24038.20",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040191",
+    "customer_id": "KD01069",
+    "invoice_date": "2025-06-11",
+    "due_date": "2025-07-26",
+    "currency": "GBP",
+    "amount": "3134.06",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040033",
+    "customer_id": "KD01052",
+    "invoice_date": "2025-01-28",
+    "due_date": "2025-02-27",
+    "currency": "GBP",
+    "amount": "4977.31",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040196",
+    "customer_id": "KD01014",
+    "invoice_date": "2025-09-03",
+    "due_date": "2025-09-18",
+    "currency": "GBP",
+    "amount": "23206.65",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040179",
+    "customer_id": "KD01046",
+    "invoice_date": "2025-09-06",
+    "due_date": "2025-09-21",
+    "currency": "GBP",
+    "amount": "2126.60",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040113",
+    "customer_id": "KD01056",
+    "invoice_date": "2025-08-08",
+    "due_date": "2025-10-07",
+    "currency": "GBP",
+    "amount": "5647.77",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040037",
+    "customer_id": "KD01080",
+    "invoice_date": "2025-11-03",
+    "due_date": "2025-12-18",
+    "currency": "GBP",
+    "amount": "20053.14",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040079",
+    "customer_id": "KD01055",
+    "invoice_date": "2025-03-18",
+    "due_date": "2025-04-02",
+    "currency": "GBP",
+    "amount": "13021.69",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040170",
+    "customer_id": "KD01042",
+    "invoice_date": "2025-08-07",
+    "due_date": "2025-09-21",
+    "currency": "GBP",
+    "amount": "10961.51",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-060013",
+    "customer_id": "KD01013",
+    "invoice_date": "2025-08-08",
+    "due_date": "2025-10-07",
+    "currency": "GBP",
+    "amount": "3306.28",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040023",
+    "customer_id": "KD01030",
+    "invoice_date": "2025-06-21",
+    "due_date": "2025-08-20",
+    "currency": "GBP",
+    "amount": "4547.81",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040152",
+    "customer_id": "KD01028",
+    "invoice_date": "2025-08-09",
+    "due_date": "2025-08-24",
+    "currency": "GBP",
+    "amount": "5159.11",
+    "status": "void"
+   },
+   {
+    "invoice_id": "INV-040174",
+    "customer_id": "KD01001",
+    "invoice_date": "2025-04-09",
+    "due_date": "2025-04-24",
+    "currency": "GBP",
+    "amount": "15232.48",
+    "status": "partial"
+   },
+   {
+    "invoice_id": "INV-040066",
+    "customer_id": "KD01077",
+    "invoice_date": "2025-03-20",
+    "due_date": "2025-04-04",
+    "currency": "GBP",
+    "amount": "10772.72",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040135",
+    "customer_id": "KD01028",
+    "invoice_date": "2025-06-07",
+    "due_date": "2025-07-07",
+    "currency": "GBP",
+    "amount": "10540.12",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-040123",
+    "customer_id": "KD01033",
+    "invoice_date": "2025-03-18",
+    "due_date": "2025-05-02",
+    "currency": "GBP",
+    "amount": "4016.76",
+    "status": "paid"
+   },
+   {
+    "invoice_id": "INV-040032",
+    "customer_id": "KD01070",
+    "invoice_date": "2025-11-20",
+    "due_date": "2025-12-05",
+    "currency": "GBP",
+    "amount": "20746.71",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040151",
+    "customer_id": "KD01028",
+    "invoice_date": "2025-03-23",
+    "due_date": "2025-05-22",
+    "currency": "GBP",
+    "amount": "4090.36",
+    "status": "open"
+   },
+   {
+    "invoice_id": "INV-060001",
+    "customer_id": "KD21001",
+    "invoice_date": "2025-05-16",
+    "due_date": "2025-06-30",
+    "currency": "GBP",
+    "amount": "17252.48",
+    "status": "overdue"
+   },
+   {
+    "invoice_id": "INV-040182",
+    "customer_id": "KD01019",
+    "invoice_date": "2025-04-19",
+    "due_date": "2025-05-04",
+    "currency": "GBP",
+    "amount": "3173.01",
+    "status": "open"
+   }
+  ],
+  "payment": [
+   {
+    "payment_id": "R-900001",
+    "invoice_id": "INV-040006",
+    "payment_date": "2025-06-21",
+    "amount": "6586.80",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900004",
+    "invoice_id": "INV-040008",
+    "payment_date": "2025-05-06",
+    "amount": "2864.70",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900006",
+    "invoice_id": "INV-040012",
+    "payment_date": "2025-03-28",
+    "amount": "22195.08",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900009",
+    "invoice_id": "INV-040013",
+    "payment_date": "2025-06-27",
+    "amount": "18388.16",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900010",
+    "invoice_id": "INV-040019",
+    "payment_date": "2025-03-09",
+    "amount": "448.25",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900012",
+    "invoice_id": "INV-040021",
+    "payment_date": "2025-05-13",
+    "amount": "1002.99",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900015",
+    "invoice_id": "INV-040161",
+    "payment_date": "2025-05-23",
+    "amount": "15214.98",
+    "method": null
+   },
+   {
+    "payment_id": "R-900017",
+    "invoice_id": "INV-040137",
+    "payment_date": "2025-05-05",
+    "amount": "216.83",
+    "method": null
+   },
+   {
+    "payment_id": "R-900018",
+    "invoice_id": "INV-040029",
+    "payment_date": "2025-11-04",
+    "amount": "13139.30",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900020",
+    "invoice_id": "INV-040032",
+    "payment_date": "2026-01-08",
+    "amount": "20746.71",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900021",
+    "invoice_id": "INV-040033",
+    "payment_date": "2025-03-26",
+    "amount": "4977.31",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900023",
+    "invoice_id": "INV-040034",
+    "payment_date": "2025-06-27",
+    "amount": "17368.15",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900024",
+    "invoice_id": "INV-040037",
+    "payment_date": "2025-11-24",
+    "amount": "20053.14",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900027",
+    "invoice_id": "INV-040038",
+    "payment_date": "2025-10-25",
+    "amount": "15840.76",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900028",
+    "invoice_id": "INV-040040",
+    "payment_date": "2025-04-20",
+    "amount": "10304.47",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900030",
+    "invoice_id": "INV-040042",
+    "payment_date": "2025-05-11",
+    "amount": "9957.87",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900032",
+    "invoice_id": "INV-040045",
+    "payment_date": "2025-05-03",
+    "amount": "11104.71",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900035",
+    "invoice_id": "INV-040050",
+    "payment_date": "2025-10-04",
+    "amount": "168.80",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900036",
+    "invoice_id": "INV-040054",
+    "payment_date": "2025-05-14",
+    "amount": "5818.40",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900038",
+    "invoice_id": "INV-040057",
+    "payment_date": "2026-01-12",
+    "amount": "11807.99",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900040",
+    "invoice_id": "INV-040061",
+    "payment_date": "2025-08-06",
+    "amount": "22256.56",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900041",
+    "invoice_id": "INV-040064",
+    "payment_date": "2025-08-26",
+    "amount": "13347.17",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900042",
+    "invoice_id": "INV-040066",
+    "payment_date": "2025-04-03",
+    "amount": "10772.72",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900045",
+    "invoice_id": "INV-040069",
+    "payment_date": "2025-04-07",
+    "amount": "1777.52",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900047",
+    "invoice_id": "INV-040070",
+    "payment_date": "2025-06-11",
+    "amount": "20828.42",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900048",
+    "invoice_id": "INV-040073",
+    "payment_date": "2025-09-21",
+    "amount": "4270.59",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900049",
+    "invoice_id": "INV-040076",
+    "payment_date": "2025-07-27",
+    "amount": "22822.07",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900050",
+    "invoice_id": "INV-040077",
+    "payment_date": "2025-12-26",
+    "amount": "17268.05",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900053",
+    "invoice_id": "INV-040079",
+    "payment_date": "2025-05-06",
+    "amount": "13021.69",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900056",
+    "invoice_id": "INV-040080",
+    "payment_date": "2026-01-03",
+    "amount": "11749.76",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900057",
+    "invoice_id": "INV-040083",
+    "payment_date": "2025-07-30",
+    "amount": "4280.16",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900058",
+    "invoice_id": "INV-040088",
+    "payment_date": "2025-10-21",
+    "amount": "15800.01",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900059",
+    "invoice_id": "INV-040091",
+    "payment_date": "2025-12-07",
+    "amount": "2602.38",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900060",
+    "invoice_id": "INV-040096",
+    "payment_date": "2025-07-23",
+    "amount": "202.68",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900061",
+    "invoice_id": "INV-040097",
+    "payment_date": "2025-02-27",
+    "amount": "20123.03",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900062",
+    "invoice_id": "INV-040099",
+    "payment_date": "2025-11-02",
+    "amount": "23408.04",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900063",
+    "invoice_id": "INV-040159",
+    "payment_date": "2025-05-09",
+    "amount": "17331.15",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900066",
+    "invoice_id": "INV-040107",
+    "payment_date": "2025-09-27",
+    "amount": "22983.32",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900067",
+    "invoice_id": "INV-040108",
+    "payment_date": "2025-03-14",
+    "amount": "19670.83",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900069",
+    "invoice_id": "INV-040110",
+    "payment_date": "2025-07-09",
+    "amount": "17031.02",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900070",
+    "invoice_id": "INV-040115",
+    "payment_date": "2025-06-05",
+    "amount": "15081.24",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900071",
+    "invoice_id": "INV-040118",
+    "payment_date": "2025-04-30",
+    "amount": "18879.77",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900074",
+    "invoice_id": "INV-040123",
+    "payment_date": "2025-04-07",
+    "amount": "4016.76",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900076",
+    "invoice_id": "INV-040125",
+    "payment_date": "2025-09-17",
+    "amount": "22403.79",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900077",
+    "invoice_id": "INV-040127",
+    "payment_date": "2025-07-27",
+    "amount": "9060.70",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900078",
+    "invoice_id": "INV-040128",
+    "payment_date": "2025-06-01",
+    "amount": "21096.41",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900079",
+    "invoice_id": "INV-040132",
+    "payment_date": "2025-04-13",
+    "amount": "19688.62",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900081",
+    "invoice_id": "INV-040133",
+    "payment_date": "2025-05-29",
+    "amount": "2849.69",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900083",
+    "invoice_id": "INV-040137",
+    "payment_date": "2025-04-09",
+    "amount": "216.83",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900086",
+    "invoice_id": "INV-040148",
+    "payment_date": "2025-06-27",
+    "amount": "9091.98",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900087",
+    "invoice_id": "INV-040141",
+    "payment_date": "2025-12-16",
+    "amount": "6658.76",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900088",
+    "invoice_id": "INV-040144",
+    "payment_date": "2025-04-19",
+    "amount": "3116.71",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900091",
+    "invoice_id": "INV-040215",
+    "payment_date": "2025-07-21",
+    "amount": "20161.75",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900092",
+    "invoice_id": "INV-040159",
+    "payment_date": "2025-05-31",
+    "amount": "17331.15",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900093",
+    "invoice_id": "INV-040160",
+    "payment_date": "2025-10-30",
+    "amount": "22153.03",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900094",
+    "invoice_id": "INV-040161",
+    "payment_date": "2025-04-22",
+    "amount": "15214.98",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900096",
+    "invoice_id": "INV-040138",
+    "payment_date": "2025-06-03",
+    "amount": "1208.65",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900098",
+    "invoice_id": "INV-040163",
+    "payment_date": "2025-09-10",
+    "amount": "835.44",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900100",
+    "invoice_id": "INV-040166",
+    "payment_date": "2025-06-17",
+    "amount": "24165.83",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900101",
+    "invoice_id": "INV-040169",
+    "payment_date": "2025-07-31",
+    "amount": "4139.14",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900102",
+    "invoice_id": "INV-040170",
+    "payment_date": "2025-09-25",
+    "amount": "10961.51",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900103",
+    "invoice_id": "INV-040174",
+    "payment_date": "2025-05-20",
+    "amount": "7616.24",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900104",
+    "invoice_id": "INV-040177",
+    "payment_date": "2025-07-06",
+    "amount": "23335.51",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900105",
+    "invoice_id": "INV-040178",
+    "payment_date": "2025-06-17",
+    "amount": "2215.36",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900107",
+    "invoice_id": "INV-040179",
+    "payment_date": "2025-09-14",
+    "amount": "2126.60",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900108",
+    "invoice_id": "INV-040189",
+    "payment_date": "2025-12-16",
+    "amount": "5718.00",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-900110",
+    "invoice_id": "INV-040195",
+    "payment_date": "2025-10-20",
+    "amount": "4072.89",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900113",
+    "invoice_id": "INV-040197",
+    "payment_date": "2025-09-26",
+    "amount": "1461.11",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-900116",
+    "invoice_id": "INV-040199",
+    "payment_date": "2025-10-23",
+    "amount": "14252.08",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900119",
+    "invoice_id": "INV-040203",
+    "payment_date": "2025-03-02",
+    "amount": "9635.92",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900122",
+    "invoice_id": "INV-040205",
+    "payment_date": "2025-06-02",
+    "amount": "24038.20",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-900123",
+    "invoice_id": "INV-040210",
+    "payment_date": "2025-03-24",
+    "amount": "9956.85",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-900125",
+    "invoice_id": "INV-040212",
+    "payment_date": "2025-05-07",
+    "amount": "2022.97",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-900126",
+    "invoice_id": "INV-040215",
+    "payment_date": "2025-06-16",
+    "amount": "20161.75",
+    "method": null
+   },
+   {
+    "payment_id": "R-920000",
+    "invoice_id": "INV-060002",
+    "payment_date": "2025-07-05",
+    "amount": "24843.34",
+    "method": "check"
+   },
+   {
+    "payment_id": "R-920001",
+    "invoice_id": "INV-040024",
+    "payment_date": "2025-09-01",
+    "amount": "24584.27",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-920002",
+    "invoice_id": "INV-040209",
+    "payment_date": "2025-10-19",
+    "amount": "12740.57",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-920003",
+    "invoice_id": "INV-040054",
+    "payment_date": "2025-05-04",
+    "amount": "5818.40",
+    "method": "wire"
+   },
+   {
+    "payment_id": "R-920004",
+    "invoice_id": "INV-060005",
+    "payment_date": "2025-07-05",
+    "amount": "14138.63",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-920005",
+    "invoice_id": "INV-040094",
+    "payment_date": "2025-09-12",
+    "amount": "2188.01",
+    "method": "ach"
+   },
+   {
+    "payment_id": "R-920006",
+    "invoice_id": "INV-040054",
+    "payment_date": "2025-05-04",
+    "amount": "5818.40",
+    "method": "cash"
+   },
+   {
+    "payment_id": "R-920007",
+    "invoice_id": "INV-040209",
+    "payment_date": "2025-10-19",
+    "amount": "12740.57",
+    "method": "card"
+   },
+   {
+    "payment_id": "R-920008",
+    "invoice_id": "INV-040029",
+    "payment_date": "2025-09-15",
+    "amount": "13139.30",
+    "method": null
+   },
+   {
+    "payment_id": "R-920009",
+    "invoice_id": "INV-040054",
+    "payment_date": "2025-05-04",
+    "amount": "5818.40",
+    "method": null
+   }
+  ]
+ },
+ "expected_quarantine": {
+  "customer": [],
+  "invoice": [],
+  "payment": []
+ },
+ "events": [
+  {
+   "kind": "add_mappable",
+   "column": "fecha_alta",
+   "field": "created_date",
+   "file": "clients.csv",
+   "entity": "customer"
+  },
+  {
+   "kind": "drop_optional",
+   "column": "tel",
+   "file": "clients.csv",
+   "entity": "customer",
+   "field": "phone"
+  },
+  {
+   "kind": "id_shape",
+   "column": "zahlungsnummer",
+   "to": "R-{:05d}",
+   "file": "paiements.csv",
+   "entity": "payment",
+   "field": "payment_id"
+  }
+ ]
+}

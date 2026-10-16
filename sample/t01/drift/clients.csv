@@ -1,0 +1,57 @@
+Export from LegacyERP v4.2
+companyName,kundennummer,memo,C3,land,fecha_alta
+Apex Logistics Ltd,KD01070,,billing@apexlogistic40.example,IRL,2024-09-03
+"Vertex, Industries & Co.",KD01067,,ap@vertexindust38.example,FRA,2019-01-27
+Umbrella Industries AG,KD01028,,accounts@umbrellaindu15.example,CHE,2019-01-28
+ Nakatomi Works Ltd ,KD01056,"call back, after 5pm",accounts@nakatomiwork31.example,BRA,2021-04-28
+Redwood Labs Ltd,KD01055,ok,finance@redwoodlabsl30.example,IRL,2024-03-07
+"Juniper, Trading & Co.",KD01011,ok,Ap@junipertradi5.example,CHE,2021-02-03
+Wayne Labs S.p.A.,KD01062,,accounts@waynelabsspa35.example,ITA,2019-05-26
+Cobalt Systems GmbH,KD01019,VIP,N/A,AUT,2021-10-28
+Monarch Partners Ltd,KD01021,VIP,billing@monarchpartn12.example,GBR,2022-04-11
+"Bluth, Newco 1",KD21001,"call back, after 5pm",ap1@newco1.example,IRL,2019-06-28
+Bluth Trading Ltd,KD01052,"net 30 agreed, per contract",accounts@bluthtrading28.example,MEX,2019-05-09
+Sterling Energy S.r.l.,KD01061,,finance@sterlingener34.example,ITA,2023-07-04
+Peña Hermanos SL,KD01054,disputed; see ticket,accounts@peahermanoss29.example,PRT,2019-01-17
+Lumen Industries Ltd,KD01033,VIP,billing@lumenindustr19.example,SWE,2022-01-02
+"Meridian, Health & Co.",KD01066,disputed; see ticket,ap@meridianheal37.example,DEU,2019-11-11
+Pioneer Newco 0,KD21000,disputed; see ticket,ap0@newco0.example,SWE,2024-08-03
+Sterling Energy GmbH,KD01015,"call back, after 5pm",Finance@sterlingener8.example,AUT,2023-04-21
+Hooli Newco 7,KD21007,,ap7@newco7.example,USA,2022-07-13
+Kestrel Supply SA,KD01071,VIP,finance@kestrelsuppl41.example,ESP,2022-11-08
+Bäckerei Schröder KG,KD01024,disputed; see ticket,accounts@bckereischrd13.example,MEX,2023-09-18
+"Northwind, Media & Co.",KD01044,"call back, after 5pm",billing@northwindmed25.example,DEU,2020-04-02
+"Pioneer, Newco 4",KD21004,,ap4@newco4.example,USA,2019-02-11
+"Summit, Health & Co.",KD01042,disputed; see ticket,ap@summithealth23.example,FRA,2025-04-01
+Zenith Logistics SA,KD01069,,ap@zenithlogist39.example,FRA,2023-08-08
+Pioneer Systems Ltd,KD01074,"call back, after 5pm",billing@pioneersyste42.example,SWE,2024-08-03
+"Pioneer, Foods & Co.",KD01046,VIP,accounts@pioneerfoods26.example,USA,2019-02-11
+Granite Foods S.p.A.,KD01013,"net 30 agreed, per contract",ap@granitefoods6.example,ITA,2025-07-13
+ Lumen Systems SARL ,KD01031,,Ap@lumensystems18.example,FRA,2020-04-25
+"Beacon, Foods & Co.",KD01005,"call back, after 5pm",finance@beaconfoodsc2.example,AUS,2022-12-18
+Falcon Trading Ltd,KD01027,ok,ap@falcontradin14.example,POL,2025-06-25
+Quanta Media Ltd,KD01058,"net 30 agreed, per contract",N/A,POL,2023-02-21
+Meridian Logistics LLC,KD01008,"call back, after 5pm",accounts@meridianlogi4.example,USA,2020-04-28
+Meridian Logistics LLC,KD01008,disputed; see ticket,accounts@meridianlogi4.example,USA,2020-04-28
+Wonka Trading PLC,KD01059,ok,accounts@wonkatrading33.example,GBR,2024-08-24
+"Pioneer, Trading & Co.",KD01014,"call back, after 5pm", ap@pioneertradi7.example ,CHE,2021-08-18
+Initech Newco 6,KD21006,VIP,ap6@newco6.example,USA,2020-06-29
+Summit Trading Ltd,KD01049,VIP,finance@summittradin27.example,POL,2022-11-10
+Apex Media Ltd,KD01077," call back, after 5pm ",billing@apexmedialtd43.example,AUS,2020-07-31
+Weyland Media Ltd,KD01016,"net 30 agreed, per contract",billing@weylandmedia9.example,JPN,2019-01-19
+"Beacon, Newco 2",KD21002,ok,ap2@newco2.example,AUS,2022-12-18
+Wonka Logistics Ltd,KD01018,disputed; see ticket,finance@wonkalogisti10.example,JPN,2024-11-12
+Lumen Systems PLC,KD01029,ok,Ap@lumensystems16.example,GBR,2021-03-01
+Tundra Energy SARL,KD01030,"net 30 agreed, per contract",billing@tundraenergy17.example,FRA,2020-03-12
+Lumen Systems Inc,KD01006,"net 30 agreed, per contract",billing@lumensystems3.example,USA,2023-03-04
+"Meridian, Newco 3",KD21003, ok ,ap3@newco3.example,DEU,2019-11-11
+Tundra Newco 5,KD21005,"call back, after 5pm",ap5@newco5.example,FRA,2020-03-12
+"Bluth, Logistics & Co.",KD01001,ok,accounts@bluthlogisti0.example,IRL, 2019-06-28 
+"Nimbus, Logistics & Co.",KD01041,VIP,accounts@nimbuslogist22.example,FRA,2023-01-06
+Umbrella Partners NV,KD01063,,ap@umbrellapart36.example,BEL,2023-12-03
+Sterling Partners SARL,KD01038,disputed; see ticket,finance@sterlingpart21.example,FRA,2022-10-17
+Hooli Health LLC,KD01036,ok,billing@hoolihealthl20.example, USA ,2022-07-13
+Nimbus Media Ltd,KD01043,ok,ap@nimbusmedial24.example,JPN,2019-11-15
+Initech Trading Corp,KD01080,"net 30 agreed, per contract",billing@initechtradi44.example,USA,2020-06-29
+Contoso Media AG,KD01002,VIP,finance@contosomedia1.example,DEU,2020-06-25
+Total records: 54

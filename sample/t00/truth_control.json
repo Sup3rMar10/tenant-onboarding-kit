@@ -1,0 +1,2711 @@
+{
+ "files": {
+  "customers.csv": {
+   "entity": "customer",
+   "columns": {
+    "customer_since": "customer.created_date",
+    "email": "customer.email",
+    "customer_id": "customer.customer_id",
+    "company": "customer.name",
+    "tier": null,
+    "country": "customer.country"
+   },
+   "kind": "csv",
+   "encoding": "utf-8",
+   "delimiter": ",",
+   "layout": "flat"
+  },
+  "invoices.csv": {
+   "entity": "invoice",
+   "columns": {
+    "invoice number": "invoice.invoice_id",
+    "customer": "invoice.customer_id",
+    "moneda": "invoice.currency",
+    "Betrag": "invoice.amount",
+    "Fälligkeitsdatum": "invoice.due_date",
+    "issue_date": "invoice.invoice_date"
+   },
+   "kind": "csv",
+   "encoding": "utf-8",
+   "delimiter": ",",
+   "layout": "flat"
+  },
+  "payments.csv": {
+   "entity": "payment",
+   "columns": {
+    "amount_paid": "payment.amount",
+    "applied_to": "payment.invoice_id",
+    "received": "payment.payment_date",
+    "mode": "payment.method",
+    "txn_id": "payment.payment_id"
+   },
+   "kind": "csv",
+   "encoding": "utf-8",
+   "delimiter": ",",
+   "layout": "flat"
+  }
+ },
+ "records": {
+  "customer": [
+   {
+    "customer_id": "C01002",
+    "name": "Atlas Systems AG",
+    "email": "finance@atlassystems0.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2023-12-30"
+   },
+   {
+    "customer_id": "C01004",
+    "name": "Tyrell Systems Ltd",
+    "email": "billing@tyrellsystem1.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2021-01-28"
+   },
+   {
+    "customer_id": "C01006",
+    "name": "Sterling Trading SARL",
+    "email": "accounts@sterlingtrad2.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-11-15"
+   },
+   {
+    "customer_id": "C01009",
+    "name": "Acme Logistics S.r.l.",
+    "email": "ap@acmelogistic3.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2019-08-16"
+   },
+   {
+    "customer_id": "C01012",
+    "name": "Vandelay Works AG",
+    "email": "accounts@vandelaywork4.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2021-04-01"
+   },
+   {
+    "customer_id": "C01013",
+    "name": "Stark Industries Ltd",
+    "email": "accounts@starkindustr5.example",
+    "phone": null,
+    "country": "AU",
+    "created_date": "2022-06-11"
+   },
+   {
+    "customer_id": "C01015",
+    "name": "Oscorp Foods Ltd",
+    "email": "billing@oscorpfoodsl6.example",
+    "phone": null,
+    "country": "CA",
+    "created_date": "2019-10-16"
+   },
+   {
+    "customer_id": "C01016",
+    "name": "Peña Hermanos SL",
+    "email": "accounts@peahermanoss7.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2023-03-30"
+   },
+   {
+    "customer_id": "C01018",
+    "name": "Orion Foods S.p.A.",
+    "email": "accounts@orionfoodssp8.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2022-04-11"
+   },
+   {
+    "customer_id": "C01020",
+    "name": "Initech Energy Ltd",
+    "email": "accounts@initechenerg9.example",
+    "phone": null,
+    "country": "SE",
+    "created_date": "2020-09-09"
+   },
+   {
+    "customer_id": "C01021",
+    "name": "Maple Media LLC",
+    "email": "finance@maplemediall10.example",
+    "phone": null,
+    "country": "US",
+    "created_date": "2020-05-16"
+   },
+   {
+    "customer_id": "C01023",
+    "name": "Juniper Trading S.p.A.",
+    "email": "billing@junipertradi11.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2024-08-29"
+   },
+   {
+    "customer_id": "C01024",
+    "name": "Aperture Systems Ltd",
+    "email": "accounts@aperturesyst12.example",
+    "phone": null,
+    "country": "CA",
+    "created_date": "2021-06-30"
+   },
+   {
+    "customer_id": "C01025",
+    "name": "Falcon Health GmbH",
+    "email": "billing@falconhealth13.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2024-05-17"
+   },
+   {
+    "customer_id": "C01027",
+    "name": "Harbor Foods S.p.A.",
+    "email": "accounts@harborfoodss14.example",
+    "phone": null,
+    "country": "IT",
+    "created_date": "2019-06-28"
+   },
+   {
+    "customer_id": "C01028",
+    "name": "Café Lumière SA",
+    "email": "finance@cafelumiresa15.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-01-04"
+   },
+   {
+    "customer_id": "C01030",
+    "name": "Globex Supply AG",
+    "email": "finance@globexsupply16.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2019-10-25"
+   },
+   {
+    "customer_id": "C01031",
+    "name": "Hooli Supply NV",
+    "email": "accounts@hoolisupplyn17.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2021-04-20"
+   },
+   {
+    "customer_id": "C01032",
+    "name": "Globex Logistics AG",
+    "email": "ap@globexlogist18.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2020-11-11"
+   },
+   {
+    "customer_id": "C01034",
+    "name": "Pioneer Logistics SA",
+    "email": null,
+    "phone": null,
+    "country": "FR",
+    "created_date": "2020-01-14"
+   },
+   {
+    "customer_id": "C01037",
+    "name": "Soylent Energy GmbH",
+    "email": "accounts@soylentenerg20.example",
+    "phone": null,
+    "country": "AT",
+    "created_date": "2021-06-30"
+   },
+   {
+    "customer_id": "C01039",
+    "name": "Weyland Trading GmbH",
+    "email": "ap@weylandtradi21.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2020-11-18"
+   },
+   {
+    "customer_id": "C01040",
+    "name": "Fabrikam Media Ltd",
+    "email": "billing@fabrikammedi22.example",
+    "phone": null,
+    "country": "IN",
+    "created_date": "2020-11-13"
+   },
+   {
+    "customer_id": "C01043",
+    "name": "Summit Energy Ltd",
+    "email": "accounts@summitenergy23.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2019-06-28"
+   },
+   {
+    "customer_id": "C01045",
+    "name": "Weyland Labs SA",
+    "email": "finance@weylandlabss24.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2024-04-06"
+   },
+   {
+    "customer_id": "C01046",
+    "name": "Apex Labs Ltd",
+    "email": "accounts@apexlabsltd25.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2020-09-16"
+   },
+   {
+    "customer_id": "C01049",
+    "name": "Hooli Energy Ltd",
+    "email": "ap@hoolienergyl26.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2024-11-12"
+   },
+   {
+    "customer_id": "C01050",
+    "name": "Redwood Health Ltd",
+    "email": "finance@redwoodhealt27.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2021-05-17"
+   },
+   {
+    "customer_id": "C01051",
+    "name": "Redwood Industries SA",
+    "email": "billing@redwoodindus28.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2019-07-30"
+   },
+   {
+    "customer_id": "C01052",
+    "name": "Cyberdyne Trading Ltd",
+    "email": "accounts@cyberdynetra29.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2022-10-31"
+   },
+   {
+    "customer_id": "C01053",
+    "name": "Redwood Media GmbH",
+    "email": "ap@redwoodmedia30.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2020-04-17"
+   },
+   {
+    "customer_id": "C01054",
+    "name": "Monarch Works NV",
+    "email": "billing@monarchworks31.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2020-02-09"
+   },
+   {
+    "customer_id": "C01055",
+    "name": "Quanta Works Ltd",
+    "email": "finance@quantaworksl32.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2019-10-04"
+   },
+   {
+    "customer_id": "C01056",
+    "name": "Łódź Textiles Sp. z o.o.",
+    "email": "accounts@dtextilesspz33.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2024-06-15"
+   },
+   {
+    "customer_id": "C01059",
+    "name": "Aperture Logistics Ltd",
+    "email": "ap@aperturelogi34.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2025-01-20"
+   },
+   {
+    "customer_id": "C01060",
+    "name": "Åkesson Fisk AB",
+    "email": "ap@kessonfiskab35.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2020-06-30"
+   },
+   {
+    "customer_id": "C01063",
+    "name": "Apex Partners B.V.",
+    "email": "finance@apexpartners36.example",
+    "phone": null,
+    "country": "NL",
+    "created_date": "2025-06-20"
+   },
+   {
+    "customer_id": "C01064",
+    "name": "Gringotts Systems Ltd",
+    "email": "ap@gringottssys37.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2023-07-30"
+   },
+   {
+    "customer_id": "C01065",
+    "name": "Monarch Industries SA",
+    "email": "accounts@monarchindus38.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2020-12-13"
+   },
+   {
+    "customer_id": "C01066",
+    "name": "Contoso Industries B.V.",
+    "email": "accounts@contosoindus39.example",
+    "phone": null,
+    "country": "NL",
+    "created_date": "2019-10-30"
+   },
+   {
+    "customer_id": "C01067",
+    "name": "Tyrell Systems SA",
+    "email": "accounts@tyrellsystem40.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2023-05-23"
+   },
+   {
+    "customer_id": "C01068",
+    "name": "Cyberdyne Systems NV",
+    "email": "finance@cyberdynesys41.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2020-07-01"
+   },
+   {
+    "customer_id": "C01069",
+    "name": "Orion Energy GmbH",
+    "email": "ap@orionenergyg42.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2025-03-27"
+   },
+   {
+    "customer_id": "C01070",
+    "name": "Umbrella Media SL",
+    "email": null,
+    "phone": null,
+    "country": "ES",
+    "created_date": "2019-05-01"
+   },
+   {
+    "customer_id": "C01071",
+    "name": "Sterling Industries GmbH",
+    "email": "billing@sterlingindu44.example",
+    "phone": null,
+    "country": "AT",
+    "created_date": "2024-12-18"
+   },
+   {
+    "customer_id": "C01074",
+    "name": "Sterling Energy Ltd",
+    "email": "finance@sterlingener45.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2019-05-10"
+   },
+   {
+    "customer_id": "C01075",
+    "name": "Orion, Works & Co.",
+    "email": "billing@orionworksco46.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2024-07-13"
+   },
+   {
+    "customer_id": "C01078",
+    "name": "Initech Labs SA",
+    "email": "accounts@initechlabss47.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2025-06-26"
+   },
+   {
+    "customer_id": "C01080",
+    "name": "Beacon Foods Ltd",
+    "email": "ap@beaconfoodsl48.example",
+    "phone": null,
+    "country": "AU",
+    "created_date": "2019-12-30"
+   },
+   {
+    "customer_id": "C01081",
+    "name": "Quanta Energy SA",
+    "email": "finance@quantaenergy49.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2022-02-21"
+   },
+   {
+    "customer_id": "C01084",
+    "name": "Cobalt Logistics PLC",
+    "email": "ap@cobaltlogist50.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2025-03-08"
+   },
+   {
+    "customer_id": "C01086",
+    "name": "Vandelay Industries Ltd",
+    "email": "ap@vandelayindu51.example",
+    "phone": null,
+    "country": "SE",
+    "created_date": "2022-07-23"
+   },
+   {
+    "customer_id": "C01088",
+    "name": "Maple Partners AG",
+    "email": "ap@maplepartner52.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2024-07-20"
+   },
+   {
+    "customer_id": "C01091",
+    "name": "Maple Labs Ltd",
+    "email": "billing@maplelabsltd53.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2019-01-17"
+   },
+   {
+    "customer_id": "C01094",
+    "name": "Bluth Foods AG",
+    "email": "accounts@bluthfoodsag54.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2022-11-13"
+   },
+   {
+    "customer_id": "C01097",
+    "name": "Cyberdyne Partners NV",
+    "email": "billing@cyberdynepar55.example",
+    "phone": null,
+    "country": "BE",
+    "created_date": "2021-11-02"
+   },
+   {
+    "customer_id": "C01099",
+    "name": "Harbor Logistics SA",
+    "email": "accounts@harborlogist56.example",
+    "phone": null,
+    "country": "FR",
+    "created_date": "2024-07-15"
+   },
+   {
+    "customer_id": "C01100",
+    "name": "Tundra Industries Ltd",
+    "email": "ap@tundraindust57.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2022-08-17"
+   },
+   {
+    "customer_id": "C01102",
+    "name": "Beacon Labs Ltd",
+    "email": "finance@beaconlabslt58.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2020-03-19"
+   },
+   {
+    "customer_id": "C01104",
+    "name": "Cobalt Trading Ltd",
+    "email": "finance@cobalttradin59.example",
+    "phone": null,
+    "country": "IE",
+    "created_date": "2021-01-16"
+   },
+   {
+    "customer_id": "C01106",
+    "name": "Sterling Systems SA",
+    "email": "accounts@sterlingsyst60.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2021-08-19"
+   },
+   {
+    "customer_id": "C01109",
+    "name": "Umbrella Logistics Ltd",
+    "email": "ap@umbrellalogi61.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2022-12-14"
+   },
+   {
+    "customer_id": "C01110",
+    "name": "Contoso Media Ltd",
+    "email": "ap@contosomedia62.example",
+    "phone": null,
+    "country": "JP",
+    "created_date": "2023-11-19"
+   },
+   {
+    "customer_id": "C01111",
+    "name": "Cyberdyne Partners AG",
+    "email": "accounts@cyberdynepar63.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2019-12-05"
+   },
+   {
+    "customer_id": "C21000",
+    "name": "Contoso Newco 0",
+    "email": "ap0@newco0.example",
+    "phone": null,
+    "country": "NL",
+    "created_date": "2019-10-30"
+   },
+   {
+    "customer_id": "C21001",
+    "name": "Peña Newco 1",
+    "email": "ap1@newco1.example",
+    "phone": null,
+    "country": "MX",
+    "created_date": "2023-03-30"
+   },
+   {
+    "customer_id": "C21002",
+    "name": "Summit Newco 2",
+    "email": "ap2@newco2.example",
+    "phone": null,
+    "country": "PL",
+    "created_date": "2019-06-28"
+   },
+   {
+    "customer_id": "C21003",
+    "name": "Cyberdyne Newco 3",
+    "email": "ap3@newco3.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2019-12-05"
+   },
+   {
+    "customer_id": "C21004",
+    "name": "Globex Newco 4",
+    "email": "ap4@newco4.example",
+    "phone": null,
+    "country": "CH",
+    "created_date": "2020-11-11"
+   },
+   {
+    "customer_id": "C21005",
+    "name": "Cobalt Newco 5",
+    "email": "ap5@newco5.example",
+    "phone": null,
+    "country": "GB",
+    "created_date": "2025-03-08"
+   },
+   {
+    "customer_id": "C21006",
+    "name": "Sterling Newco 6",
+    "email": "ap6@newco6.example",
+    "phone": null,
+    "country": "ES",
+    "created_date": "2021-08-19"
+   },
+   {
+    "customer_id": "C21007",
+    "name": "Aperture Newco 7",
+    "email": "ap7@newco7.example",
+    "phone": null,
+    "country": "PT",
+    "created_date": "2025-01-20"
+   },
+   {
+    "customer_id": "C21008",
+    "name": "Weyland Newco 8",
+    "email": "ap8@newco8.example",
+    "phone": null,
+    "country": "DE",
+    "created_date": "2020-11-18"
+   }
+  ],
+  "invoice": [
+   {
+    "invoice_id": "RE-2025-40001",
+    "customer_id": "C01052",
+    "invoice_date": "2025-09-27",
+    "due_date": "2025-10-12",
+    "currency": "USD",
+    "amount": "204.03",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40002",
+    "customer_id": "C01071",
+    "invoice_date": "2025-03-17",
+    "due_date": "2025-04-01",
+    "currency": "USD",
+    "amount": "19938.34",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40003",
+    "customer_id": "C01025",
+    "invoice_date": "2025-06-17",
+    "due_date": "2025-07-17",
+    "currency": "USD",
+    "amount": "23363.21",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40005",
+    "customer_id": "C01060",
+    "invoice_date": "2025-10-07",
+    "due_date": "2025-12-06",
+    "currency": "USD",
+    "amount": "23084.24",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40006",
+    "customer_id": "C01111",
+    "invoice_date": "2025-06-20",
+    "due_date": "2025-07-20",
+    "currency": "USD",
+    "amount": "24854.83",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40009",
+    "customer_id": "C01043",
+    "invoice_date": "2025-10-24",
+    "due_date": "2025-12-23",
+    "currency": "USD",
+    "amount": "21666.89",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40011",
+    "customer_id": "C01100",
+    "invoice_date": "2025-04-24",
+    "due_date": "2025-06-23",
+    "currency": "USD",
+    "amount": "22237.97",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40014",
+    "customer_id": "C01023",
+    "invoice_date": "2025-04-20",
+    "due_date": "2025-05-05",
+    "currency": "USD",
+    "amount": "1411.66",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40015",
+    "customer_id": "C01063",
+    "invoice_date": "2025-07-02",
+    "due_date": "2025-08-01",
+    "currency": "USD",
+    "amount": "6213.06",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40016",
+    "customer_id": "C01059",
+    "invoice_date": "2025-06-03",
+    "due_date": "2025-07-03",
+    "currency": "USD",
+    "amount": "2898.05",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40018",
+    "customer_id": "C01065",
+    "invoice_date": "2025-04-15",
+    "due_date": "2025-05-30",
+    "currency": "USD",
+    "amount": "23243.15",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40019",
+    "customer_id": "C01097",
+    "invoice_date": "2025-10-30",
+    "due_date": "2025-12-29",
+    "currency": "USD",
+    "amount": "17871.18",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40020",
+    "customer_id": "C01088",
+    "invoice_date": "2025-11-25",
+    "due_date": "2025-12-10",
+    "currency": "USD",
+    "amount": "11307.96",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40022",
+    "customer_id": "C01032",
+    "invoice_date": "2025-08-29",
+    "due_date": "2025-10-13",
+    "currency": "USD",
+    "amount": "12871.79",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40023",
+    "customer_id": "C01030",
+    "invoice_date": "2025-01-30",
+    "due_date": "2025-03-01",
+    "currency": "USD",
+    "amount": "5879.40",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40026",
+    "customer_id": "C01013",
+    "invoice_date": "2025-07-30",
+    "due_date": "2025-08-29",
+    "currency": "USD",
+    "amount": "12013.64",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40027",
+    "customer_id": "C01052",
+    "invoice_date": "2025-09-15",
+    "due_date": "2025-10-30",
+    "currency": "USD",
+    "amount": "1332.74",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40028",
+    "customer_id": "C01088",
+    "invoice_date": "2025-09-08",
+    "due_date": "2025-10-23",
+    "currency": "USD",
+    "amount": "19038.23",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40029",
+    "customer_id": "C01065",
+    "invoice_date": "2025-09-02",
+    "due_date": "2025-09-17",
+    "currency": "USD",
+    "amount": "17858.49",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40031",
+    "customer_id": "C01111",
+    "invoice_date": "2025-07-04",
+    "due_date": "2025-07-19",
+    "currency": "USD",
+    "amount": "17749.28",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40033",
+    "customer_id": "C01100",
+    "invoice_date": "2025-09-19",
+    "due_date": "2025-11-03",
+    "currency": "USD",
+    "amount": "6490.33",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40034",
+    "customer_id": "C01043",
+    "invoice_date": "2025-11-19",
+    "due_date": "2026-01-18",
+    "currency": "USD",
+    "amount": "1919.37",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40037",
+    "customer_id": "C01012",
+    "invoice_date": "2025-02-19",
+    "due_date": "2025-04-05",
+    "currency": "USD",
+    "amount": "17085.36",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40038",
+    "customer_id": "C01043",
+    "invoice_date": "2025-04-14",
+    "due_date": "2025-04-29",
+    "currency": "USD",
+    "amount": "3666.29",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40040",
+    "customer_id": "C01040",
+    "invoice_date": "2025-04-28",
+    "due_date": "2025-06-27",
+    "currency": "USD",
+    "amount": "378.09",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40041",
+    "customer_id": "C01053",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "USD",
+    "amount": "6236.23",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40042",
+    "customer_id": "C01034",
+    "invoice_date": "2025-11-03",
+    "due_date": "2025-11-18",
+    "currency": "USD",
+    "amount": "9424.54",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40043",
+    "customer_id": "C01065",
+    "invoice_date": "2025-01-07",
+    "due_date": "2025-01-22",
+    "currency": "USD",
+    "amount": "8048.61",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40044",
+    "customer_id": "C01056",
+    "invoice_date": "2025-11-21",
+    "due_date": "2026-01-05",
+    "currency": "USD",
+    "amount": "9382.32",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40046",
+    "customer_id": "C01045",
+    "invoice_date": "2025-09-28",
+    "due_date": "2025-10-13",
+    "currency": "USD",
+    "amount": "8705.53",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40049",
+    "customer_id": "C01109",
+    "invoice_date": "2025-08-14",
+    "due_date": "2025-10-13",
+    "currency": "USD",
+    "amount": "8422.21",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40050",
+    "customer_id": "C01053",
+    "invoice_date": "2025-09-17",
+    "due_date": "2025-10-02",
+    "currency": "USD",
+    "amount": "2240.63",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40051",
+    "customer_id": "C01084",
+    "invoice_date": "2025-04-13",
+    "due_date": "2025-05-28",
+    "currency": "USD",
+    "amount": "10524.76",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40053",
+    "customer_id": "C01012",
+    "invoice_date": "2025-05-22",
+    "due_date": "2025-06-21",
+    "currency": "USD",
+    "amount": "10795.27",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40056",
+    "customer_id": "C01074",
+    "invoice_date": "2025-03-02",
+    "due_date": "2025-05-01",
+    "currency": "USD",
+    "amount": "21730.15",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40058",
+    "customer_id": "C01034",
+    "invoice_date": "2025-10-12",
+    "due_date": null,
+    "currency": "USD",
+    "amount": "19374.74",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40059",
+    "customer_id": "C01049",
+    "invoice_date": "2025-09-10",
+    "due_date": "2025-11-09",
+    "currency": "USD",
+    "amount": "22167.95",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40061",
+    "customer_id": "C01063",
+    "invoice_date": "2025-05-07",
+    "due_date": "2025-05-22",
+    "currency": "USD",
+    "amount": "3906.52",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40064",
+    "customer_id": "C01040",
+    "invoice_date": "2025-06-12",
+    "due_date": "2025-07-12",
+    "currency": "USD",
+    "amount": "600.46",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40065",
+    "customer_id": "C01064",
+    "invoice_date": "2025-03-10",
+    "due_date": "2025-05-09",
+    "currency": "USD",
+    "amount": "15841.78",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40066",
+    "customer_id": "C01023",
+    "invoice_date": "2025-03-30",
+    "due_date": "2025-04-14",
+    "currency": "USD",
+    "amount": "17296.55",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40067",
+    "customer_id": "C01039",
+    "invoice_date": "2025-11-14",
+    "due_date": "2025-12-29",
+    "currency": "USD",
+    "amount": "4269.65",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40070",
+    "customer_id": "C01030",
+    "invoice_date": "2025-02-22",
+    "due_date": "2025-04-08",
+    "currency": "USD",
+    "amount": "19900.17",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40073",
+    "customer_id": "C01071",
+    "invoice_date": "2025-04-29",
+    "due_date": "2025-06-13",
+    "currency": "USD",
+    "amount": "9585.65",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40074",
+    "customer_id": "C01045",
+    "invoice_date": "2025-07-24",
+    "due_date": "2025-09-07",
+    "currency": "USD",
+    "amount": "5456.48",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40075",
+    "customer_id": "C01040",
+    "invoice_date": "2025-05-15",
+    "due_date": "2025-05-30",
+    "currency": "USD",
+    "amount": "15630.28",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40078",
+    "customer_id": "C01106",
+    "invoice_date": "2025-07-30",
+    "due_date": "2025-08-29",
+    "currency": "USD",
+    "amount": "18999.35",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40080",
+    "customer_id": "C01102",
+    "invoice_date": "2025-03-16",
+    "due_date": "2025-05-15",
+    "currency": "USD",
+    "amount": "10645.31",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40081",
+    "customer_id": "C01027",
+    "invoice_date": "2025-04-18",
+    "due_date": "2025-05-18",
+    "currency": "USD",
+    "amount": "14423.08",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40084",
+    "customer_id": "C01050",
+    "invoice_date": "2025-08-27",
+    "due_date": "2025-10-26",
+    "currency": "USD",
+    "amount": "18422.59",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40086",
+    "customer_id": "C01052",
+    "invoice_date": "2025-01-02",
+    "due_date": "2025-03-03",
+    "currency": "USD",
+    "amount": "11368.38",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40088",
+    "customer_id": "C01063",
+    "invoice_date": "2025-01-19",
+    "due_date": "2025-03-20",
+    "currency": "USD",
+    "amount": "19459.90",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40091",
+    "customer_id": "C01084",
+    "invoice_date": "2025-09-05",
+    "due_date": "2025-09-20",
+    "currency": "USD",
+    "amount": "13595.81",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40092",
+    "customer_id": "C01067",
+    "invoice_date": "2025-04-04",
+    "due_date": "2025-05-04",
+    "currency": "USD",
+    "amount": "11447.50",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40095",
+    "customer_id": "C01080",
+    "invoice_date": "2025-08-18",
+    "due_date": "2025-10-17",
+    "currency": "USD",
+    "amount": "10017.63",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40097",
+    "customer_id": "C01046",
+    "invoice_date": "2025-11-22",
+    "due_date": "2025-12-07",
+    "currency": "USD",
+    "amount": "14484.18",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40098",
+    "customer_id": "C01009",
+    "invoice_date": "2025-09-25",
+    "due_date": "2025-10-25",
+    "currency": "USD",
+    "amount": "1222.19",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40099",
+    "customer_id": "C01086",
+    "invoice_date": "2025-08-31",
+    "due_date": "2025-10-30",
+    "currency": "USD",
+    "amount": "2171.94",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40100",
+    "customer_id": "C01088",
+    "invoice_date": "2025-08-25",
+    "due_date": "2025-09-24",
+    "currency": "USD",
+    "amount": "5217.91",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40103",
+    "customer_id": "C01032",
+    "invoice_date": "2025-03-25",
+    "due_date": "2025-04-09",
+    "currency": "USD",
+    "amount": "12831.88",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40104",
+    "customer_id": "C01043",
+    "invoice_date": "2025-06-14",
+    "due_date": "2025-06-29",
+    "currency": "USD",
+    "amount": "5873.72",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40105",
+    "customer_id": "C01081",
+    "invoice_date": "2025-04-02",
+    "due_date": "2025-06-01",
+    "currency": "USD",
+    "amount": "3905.01",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40107",
+    "customer_id": "C01099",
+    "invoice_date": "2025-05-08",
+    "due_date": "2025-07-07",
+    "currency": "USD",
+    "amount": "3674.29",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40109",
+    "customer_id": "C01056",
+    "invoice_date": "2025-03-01",
+    "due_date": "2025-04-30",
+    "currency": "USD",
+    "amount": "12001.97",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40112",
+    "customer_id": "C01040",
+    "invoice_date": "2025-03-31",
+    "due_date": "2025-04-30",
+    "currency": "USD",
+    "amount": "9643.35",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40114",
+    "customer_id": "C01018",
+    "invoice_date": "2025-08-15",
+    "due_date": "2025-08-30",
+    "currency": "USD",
+    "amount": "6837.94",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40117",
+    "customer_id": "C01031",
+    "invoice_date": "2025-05-25",
+    "due_date": "2025-07-24",
+    "currency": "USD",
+    "amount": "370.18",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40118",
+    "customer_id": "C01039",
+    "invoice_date": "2025-08-07",
+    "due_date": "2025-08-22",
+    "currency": "USD",
+    "amount": "16009.26",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40120",
+    "customer_id": "C01091",
+    "invoice_date": "2025-05-03",
+    "due_date": "2025-06-02",
+    "currency": "USD",
+    "amount": "22060.66",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40121",
+    "customer_id": "C01100",
+    "invoice_date": "2025-02-06",
+    "due_date": "2025-02-21",
+    "currency": "USD",
+    "amount": "140.12",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40123",
+    "customer_id": "C01068",
+    "invoice_date": "2025-03-31",
+    "due_date": "2025-05-15",
+    "currency": "USD",
+    "amount": "4273.50",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40125",
+    "customer_id": "C01078",
+    "invoice_date": "2025-02-17",
+    "due_date": "2025-03-19",
+    "currency": "USD",
+    "amount": "20028.67",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40126",
+    "customer_id": "C01070",
+    "invoice_date": "2025-11-20",
+    "due_date": "2025-12-05",
+    "currency": "USD",
+    "amount": "7886.58",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40129",
+    "customer_id": "C01068",
+    "invoice_date": "2025-06-18",
+    "due_date": null,
+    "currency": "USD",
+    "amount": "24960.86",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40132",
+    "customer_id": "C01111",
+    "invoice_date": "2025-03-11",
+    "due_date": "2025-04-25",
+    "currency": "USD",
+    "amount": "2560.38",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40133",
+    "customer_id": "C01028",
+    "invoice_date": "2025-08-04",
+    "due_date": "2025-08-19",
+    "currency": "USD",
+    "amount": "11708.65",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40135",
+    "customer_id": "C01063",
+    "invoice_date": "2025-03-04",
+    "due_date": null,
+    "currency": "USD",
+    "amount": "5651.94",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40137",
+    "customer_id": "C01006",
+    "invoice_date": "2025-08-24",
+    "due_date": "2025-10-23",
+    "currency": "USD",
+    "amount": "24801.04",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40139",
+    "customer_id": "C01066",
+    "invoice_date": "2025-08-06",
+    "due_date": "2025-09-05",
+    "currency": "USD",
+    "amount": "11958.32",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40142",
+    "customer_id": "C01099",
+    "invoice_date": "2025-11-04",
+    "due_date": "2025-12-19",
+    "currency": "USD",
+    "amount": "7919.45",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40143",
+    "customer_id": "C01106",
+    "invoice_date": "2025-09-19",
+    "due_date": "2025-10-04",
+    "currency": "USD",
+    "amount": "14280.50",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40146",
+    "customer_id": "C01065",
+    "invoice_date": "2025-05-24",
+    "due_date": "2025-06-08",
+    "currency": "USD",
+    "amount": "11592.22",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40147",
+    "customer_id": "C01032",
+    "invoice_date": "2025-06-07",
+    "due_date": "2025-08-06",
+    "currency": "USD",
+    "amount": "15455.10",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40148",
+    "customer_id": "C01074",
+    "invoice_date": "2025-04-29",
+    "due_date": "2025-05-14",
+    "currency": "USD",
+    "amount": "14799.65",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40149",
+    "customer_id": "C01052",
+    "invoice_date": "2025-05-10",
+    "due_date": "2025-05-25",
+    "currency": "USD",
+    "amount": "17065.87",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40152",
+    "customer_id": "C01066",
+    "invoice_date": "2025-03-24",
+    "due_date": "2025-04-23",
+    "currency": "USD",
+    "amount": "13950.46",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40153",
+    "customer_id": "C01031",
+    "invoice_date": "2025-05-18",
+    "due_date": "2025-06-02",
+    "currency": "USD",
+    "amount": "760.42",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40154",
+    "customer_id": "C01020",
+    "invoice_date": "2025-08-06",
+    "due_date": "2025-09-05",
+    "currency": "USD",
+    "amount": "7318.34",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40157",
+    "customer_id": "C01009",
+    "invoice_date": "2025-06-10",
+    "due_date": "2025-08-09",
+    "currency": "USD",
+    "amount": "21351.22",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40158",
+    "customer_id": "C01024",
+    "invoice_date": "2025-07-17",
+    "due_date": "2025-08-01",
+    "currency": "USD",
+    "amount": "4434.75",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40159",
+    "customer_id": "C01051",
+    "invoice_date": "2025-04-08",
+    "due_date": "2025-05-08",
+    "currency": "USD",
+    "amount": "13235.23",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40162",
+    "customer_id": "C01024",
+    "invoice_date": "2025-06-15",
+    "due_date": "2025-06-30",
+    "currency": "USD",
+    "amount": "3744.75",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40163",
+    "customer_id": "C01097",
+    "invoice_date": "2025-05-23",
+    "due_date": "2025-06-07",
+    "currency": "USD",
+    "amount": "17263.93",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40164",
+    "customer_id": "C01051",
+    "invoice_date": "2025-01-09",
+    "due_date": "2025-02-08",
+    "currency": "USD",
+    "amount": "24120.49",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40167",
+    "customer_id": "C01046",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "USD",
+    "amount": "15913.74",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40168",
+    "customer_id": "C01009",
+    "invoice_date": "2025-01-03",
+    "due_date": "2025-02-17",
+    "currency": "USD",
+    "amount": "4705.85",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40169",
+    "customer_id": "C01084",
+    "invoice_date": "2025-04-05",
+    "due_date": "2025-05-20",
+    "currency": "USD",
+    "amount": "15896.63",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40170",
+    "customer_id": "C01012",
+    "invoice_date": "2025-03-17",
+    "due_date": "2025-04-01",
+    "currency": "USD",
+    "amount": "10252.41",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40173",
+    "customer_id": "C01046",
+    "invoice_date": "2025-05-05",
+    "due_date": "2025-05-20",
+    "currency": "USD",
+    "amount": "19876.32",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40175",
+    "customer_id": "C01069",
+    "invoice_date": "2025-02-07",
+    "due_date": "2025-03-09",
+    "currency": "USD",
+    "amount": "21167.45",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40178",
+    "customer_id": "C01080",
+    "invoice_date": "2025-04-07",
+    "due_date": "2025-06-06",
+    "currency": "USD",
+    "amount": "24228.14",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40180",
+    "customer_id": "C01054",
+    "invoice_date": "2025-03-20",
+    "due_date": "2025-04-04",
+    "currency": "USD",
+    "amount": "15671.03",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40181",
+    "customer_id": "C01046",
+    "invoice_date": "2025-06-10",
+    "due_date": "2025-07-10",
+    "currency": "USD",
+    "amount": "2216.58",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40183",
+    "customer_id": "C01068",
+    "invoice_date": "2025-11-17",
+    "due_date": "2025-12-02",
+    "currency": "USD",
+    "amount": "7693.50",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40184",
+    "customer_id": "C01006",
+    "invoice_date": "2025-04-11",
+    "due_date": "2025-05-26",
+    "currency": "USD",
+    "amount": "111.32",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40186",
+    "customer_id": "C01037",
+    "invoice_date": "2025-07-28",
+    "due_date": "2025-09-11",
+    "currency": "USD",
+    "amount": "10741.30",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40189",
+    "customer_id": "C01080",
+    "invoice_date": "2025-07-27",
+    "due_date": "2025-08-11",
+    "currency": "USD",
+    "amount": "24799.84",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40191",
+    "customer_id": "C01039",
+    "invoice_date": "2025-09-23",
+    "due_date": "2025-11-07",
+    "currency": "USD",
+    "amount": "14601.09",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40192",
+    "customer_id": "C01013",
+    "invoice_date": "2025-04-17",
+    "due_date": "2025-06-01",
+    "currency": "USD",
+    "amount": "5399.28",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40193",
+    "customer_id": "C01053",
+    "invoice_date": "2025-04-17",
+    "due_date": "2025-06-01",
+    "currency": "USD",
+    "amount": "9602.74",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40194",
+    "customer_id": "C01071",
+    "invoice_date": "2025-09-23",
+    "due_date": "2025-11-22",
+    "currency": "USD",
+    "amount": "18155.88",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40197",
+    "customer_id": "C01043",
+    "invoice_date": "2025-04-05",
+    "due_date": "2025-06-04",
+    "currency": "USD",
+    "amount": "9906.63",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40198",
+    "customer_id": "C01053",
+    "invoice_date": "2025-10-25",
+    "due_date": "2025-12-09",
+    "currency": "USD",
+    "amount": "15254.22",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40201",
+    "customer_id": "C01025",
+    "invoice_date": "2025-11-18",
+    "due_date": "2025-12-18",
+    "currency": "USD",
+    "amount": "4638.29",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40202",
+    "customer_id": "C01009",
+    "invoice_date": "2025-07-30",
+    "due_date": "2025-09-28",
+    "currency": "USD",
+    "amount": "22354.92",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40204",
+    "customer_id": "C01054",
+    "invoice_date": "2025-04-20",
+    "due_date": "2025-06-19",
+    "currency": "USD",
+    "amount": "21795.04",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40205",
+    "customer_id": "C01018",
+    "invoice_date": "2025-11-11",
+    "due_date": "2025-12-11",
+    "currency": "USD",
+    "amount": "23959.94",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40206",
+    "customer_id": "C01023",
+    "invoice_date": "2025-02-10",
+    "due_date": "2025-04-11",
+    "currency": "USD",
+    "amount": "14898.54",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40207",
+    "customer_id": "C01012",
+    "invoice_date": "2025-09-07",
+    "due_date": "2025-09-22",
+    "currency": "USD",
+    "amount": "8862.09",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40208",
+    "customer_id": "C01043",
+    "invoice_date": "2025-03-23",
+    "due_date": "2025-05-07",
+    "currency": "USD",
+    "amount": "7173.80",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40209",
+    "customer_id": "C01070",
+    "invoice_date": "2025-02-17",
+    "due_date": "2025-03-19",
+    "currency": "USD",
+    "amount": "22273.48",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40210",
+    "customer_id": "C01097",
+    "invoice_date": "2025-05-06",
+    "due_date": "2025-07-05",
+    "currency": "USD",
+    "amount": "7152.06",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40213",
+    "customer_id": "C01016",
+    "invoice_date": "2025-01-18",
+    "due_date": "2025-03-04",
+    "currency": "USD",
+    "amount": "17012.60",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40214",
+    "customer_id": "C01068",
+    "invoice_date": "2025-07-26",
+    "due_date": "2025-08-10",
+    "currency": "USD",
+    "amount": "11692.77",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40215",
+    "customer_id": "C01069",
+    "invoice_date": "2025-03-12",
+    "due_date": "2025-04-26",
+    "currency": "USD",
+    "amount": "11505.24",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40216",
+    "customer_id": "C01106",
+    "invoice_date": "2025-06-06",
+    "due_date": "2025-08-05",
+    "currency": "USD",
+    "amount": "16380.23",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40218",
+    "customer_id": "C01099",
+    "invoice_date": "2025-04-01",
+    "due_date": "2025-05-31",
+    "currency": "USD",
+    "amount": "22261.47",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40219",
+    "customer_id": "C01053",
+    "invoice_date": "2025-07-24",
+    "due_date": "2025-08-23",
+    "currency": "USD",
+    "amount": "11779.84",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40220",
+    "customer_id": "C01009",
+    "invoice_date": "2025-11-18",
+    "due_date": "2025-12-03",
+    "currency": "USD",
+    "amount": "19365.30",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40223",
+    "customer_id": "C01106",
+    "invoice_date": "2025-03-02",
+    "due_date": "2025-04-01",
+    "currency": "USD",
+    "amount": "13464.44",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40224",
+    "customer_id": "C01020",
+    "invoice_date": "2025-05-29",
+    "due_date": "2025-07-13",
+    "currency": "USD",
+    "amount": "12025.28",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40227",
+    "customer_id": "C01032",
+    "invoice_date": "2025-02-07",
+    "due_date": "2025-02-22",
+    "currency": "USD",
+    "amount": "16613.27",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40228",
+    "customer_id": "C01066",
+    "invoice_date": "2025-07-12",
+    "due_date": "2025-08-11",
+    "currency": "USD",
+    "amount": "5825.82",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40229",
+    "customer_id": "C01012",
+    "invoice_date": "2025-02-28",
+    "due_date": "2025-04-29",
+    "currency": "USD",
+    "amount": "21024.17",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40231",
+    "customer_id": "C01075",
+    "invoice_date": "2025-04-05",
+    "due_date": "2025-05-20",
+    "currency": "USD",
+    "amount": "23389.43",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40233",
+    "customer_id": "C01015",
+    "invoice_date": "2025-05-23",
+    "due_date": "2025-06-07",
+    "currency": "USD",
+    "amount": "9599.93",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40236",
+    "customer_id": "C01109",
+    "invoice_date": "2025-11-15",
+    "due_date": "2025-11-30",
+    "currency": "USD",
+    "amount": "11863.66",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40239",
+    "customer_id": "C01080",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "USD",
+    "amount": "22305.31",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40240",
+    "customer_id": "C01060",
+    "invoice_date": "2025-04-19",
+    "due_date": "2025-06-03",
+    "currency": "USD",
+    "amount": "13770.74",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40243",
+    "customer_id": "C01024",
+    "invoice_date": "2025-10-11",
+    "due_date": "2025-10-26",
+    "currency": "USD",
+    "amount": "20038.90",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40244",
+    "customer_id": "C01060",
+    "invoice_date": "2025-09-04",
+    "due_date": "2025-09-19",
+    "currency": "USD",
+    "amount": "2401.46",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-40245",
+    "customer_id": "C01100",
+    "invoice_date": "2025-03-15",
+    "due_date": "2025-03-30",
+    "currency": "USD",
+    "amount": "3620.36",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60000",
+    "customer_id": "C01067",
+    "invoice_date": "2025-04-14",
+    "due_date": "2025-04-29",
+    "currency": "USD",
+    "amount": "4245.62",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60001",
+    "customer_id": "C01109",
+    "invoice_date": "2025-09-28",
+    "due_date": "2025-10-13",
+    "currency": "USD",
+    "amount": "11550.15",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60002",
+    "customer_id": "C01006",
+    "invoice_date": "2025-03-30",
+    "due_date": "2025-04-14",
+    "currency": "USD",
+    "amount": "13501.19",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60003",
+    "customer_id": "C01053",
+    "invoice_date": "2025-04-14",
+    "due_date": "2025-04-29",
+    "currency": "USD",
+    "amount": "5876.54",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60004",
+    "customer_id": "C01050",
+    "invoice_date": "2025-08-29",
+    "due_date": "2025-10-13",
+    "currency": "USD",
+    "amount": "9816.39",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60005",
+    "customer_id": "C01081",
+    "invoice_date": "2025-11-14",
+    "due_date": "2025-12-29",
+    "currency": "USD",
+    "amount": "2385.43",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60006",
+    "customer_id": "C01091",
+    "invoice_date": "2025-07-30",
+    "due_date": "2025-08-29",
+    "currency": "USD",
+    "amount": "8012.16",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60007",
+    "customer_id": "C01075",
+    "invoice_date": "2025-06-15",
+    "due_date": "2025-06-30",
+    "currency": "USD",
+    "amount": "13460.14",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60008",
+    "customer_id": "C01034",
+    "invoice_date": "2025-04-07",
+    "due_date": "2025-06-06",
+    "currency": "USD",
+    "amount": "1242.59",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60009",
+    "customer_id": "C01051",
+    "invoice_date": "2025-03-24",
+    "due_date": "2025-04-23",
+    "currency": "USD",
+    "amount": "24025.86",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60010",
+    "customer_id": "C01025",
+    "invoice_date": "2025-06-07",
+    "due_date": "2025-08-06",
+    "currency": "USD",
+    "amount": "20041.31",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60011",
+    "customer_id": "C01002",
+    "invoice_date": "2025-11-19",
+    "due_date": "2026-01-18",
+    "currency": "USD",
+    "amount": "15697.07",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60012",
+    "customer_id": "C01091",
+    "invoice_date": "2025-02-17",
+    "due_date": "2025-03-19",
+    "currency": "USD",
+    "amount": "18755.03",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60013",
+    "customer_id": "C01086",
+    "invoice_date": "2025-04-11",
+    "due_date": "2025-05-26",
+    "currency": "USD",
+    "amount": "20597.97",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60014",
+    "customer_id": "C01037",
+    "invoice_date": "2025-08-06",
+    "due_date": "2025-09-05",
+    "currency": "USD",
+    "amount": "9446.31",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60015",
+    "customer_id": "C01052",
+    "invoice_date": "2025-04-21",
+    "due_date": "2025-06-20",
+    "currency": "USD",
+    "amount": "11746.20",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60016",
+    "customer_id": "C01025",
+    "invoice_date": "2025-05-10",
+    "due_date": "2025-05-25",
+    "currency": "USD",
+    "amount": "813.25",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60017",
+    "customer_id": "C01052",
+    "invoice_date": "2025-06-10",
+    "due_date": "2025-08-09",
+    "currency": "USD",
+    "amount": "4363.47",
+    "status": null
+   },
+   {
+    "invoice_id": "RE-2025-60018",
+    "customer_id": "C21005",
+    "invoice_date": "2025-03-15",
+    "due_date": "2025-03-30",
+    "currency": "USD",
+    "amount": "7720.83",
+    "status": null
+   }
+  ],
+  "payment": [
+   {
+    "payment_id": "900001",
+    "invoice_id": "RE-2025-40001",
+    "payment_date": "2025-11-24",
+    "amount": "204.03",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900002",
+    "invoice_id": "RE-2025-40002",
+    "payment_date": "2025-05-14",
+    "amount": "19938.34",
+    "method": "check"
+   },
+   {
+    "payment_id": "900004",
+    "invoice_id": "RE-2025-40006",
+    "payment_date": "2025-07-12",
+    "amount": "24854.83",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900005",
+    "invoice_id": "RE-2025-40009",
+    "payment_date": "2025-11-27",
+    "amount": "21666.89",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900006",
+    "invoice_id": "RE-2025-40011",
+    "payment_date": "2025-05-02",
+    "amount": "22237.97",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900008",
+    "invoice_id": "RE-2025-40018",
+    "payment_date": "2025-05-30",
+    "amount": "23243.15",
+    "method": "card"
+   },
+   {
+    "payment_id": "900009",
+    "invoice_id": "RE-2025-40020",
+    "payment_date": "2025-11-30",
+    "amount": "11307.96",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900010",
+    "invoice_id": "RE-2025-40075",
+    "payment_date": "2025-06-16",
+    "amount": "15630.28",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900013",
+    "invoice_id": "RE-2025-40023",
+    "payment_date": "2025-02-23",
+    "amount": "5879.40",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900014",
+    "invoice_id": "RE-2025-40103",
+    "payment_date": "2025-04-01",
+    "amount": "12831.88",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900015",
+    "invoice_id": "RE-2025-40027",
+    "payment_date": "2025-09-23",
+    "amount": "1332.74",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900016",
+    "invoice_id": "RE-2025-40028",
+    "payment_date": "2025-10-23",
+    "amount": "19038.23",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900017",
+    "invoice_id": "RE-2025-40029",
+    "payment_date": "2025-10-05",
+    "amount": "17858.49",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900019",
+    "invoice_id": "RE-2025-40034",
+    "payment_date": "2026-01-15",
+    "amount": "1919.37",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900020",
+    "invoice_id": "RE-2025-40040",
+    "payment_date": "2025-05-07",
+    "amount": "378.09",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900021",
+    "invoice_id": "RE-2025-40041",
+    "payment_date": "2025-05-22",
+    "amount": "6236.23",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900022",
+    "invoice_id": "RE-2025-40042",
+    "payment_date": "2025-12-24",
+    "amount": "9424.54",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900023",
+    "invoice_id": "RE-2025-40044",
+    "payment_date": "2026-01-11",
+    "amount": "9382.32",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900024",
+    "invoice_id": "RE-2025-40046",
+    "payment_date": "2025-11-20",
+    "amount": "8705.53",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900025",
+    "invoice_id": "RE-2025-40050",
+    "payment_date": "2025-11-12",
+    "amount": "2240.63",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900027",
+    "invoice_id": "RE-2025-40051",
+    "payment_date": "2025-04-27",
+    "amount": "10524.76",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900028",
+    "invoice_id": "RE-2025-40053",
+    "payment_date": "2025-06-05",
+    "amount": "10795.27",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900030",
+    "invoice_id": "RE-2025-40056",
+    "payment_date": "2025-03-28",
+    "amount": "10865.08",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900031",
+    "invoice_id": "RE-2025-40058",
+    "payment_date": "2025-11-08",
+    "amount": "19374.74",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900034",
+    "invoice_id": "RE-2025-40064",
+    "payment_date": "2025-06-25",
+    "amount": "300.23",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900036",
+    "invoice_id": "RE-2025-40065",
+    "payment_date": "2025-04-24",
+    "amount": "15841.78",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900037",
+    "invoice_id": "RE-2025-40070",
+    "payment_date": "2025-03-20",
+    "amount": "19900.17",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900040",
+    "invoice_id": "RE-2025-40058",
+    "payment_date": "2025-10-31",
+    "amount": "19374.74",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900041",
+    "invoice_id": "RE-2025-40075",
+    "payment_date": "2025-07-11",
+    "amount": "15630.28",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900042",
+    "invoice_id": "RE-2025-40078",
+    "payment_date": "2025-08-10",
+    "amount": "18999.35",
+    "method": "check"
+   },
+   {
+    "payment_id": "900044",
+    "invoice_id": "RE-2025-40080",
+    "payment_date": "2025-03-23",
+    "amount": "10645.31",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900045",
+    "invoice_id": "RE-2025-40088",
+    "payment_date": "2025-03-03",
+    "amount": "19459.90",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900046",
+    "invoice_id": "RE-2025-40091",
+    "payment_date": "2025-10-24",
+    "amount": "6797.90",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900047",
+    "invoice_id": "RE-2025-40097",
+    "payment_date": "2025-12-24",
+    "amount": "14484.18",
+    "method": "card"
+   },
+   {
+    "payment_id": "900049",
+    "invoice_id": "RE-2025-40098",
+    "payment_date": "2025-11-05",
+    "amount": "1222.19",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900051",
+    "invoice_id": "RE-2025-40099",
+    "payment_date": "2025-10-05",
+    "amount": "2171.94",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900052",
+    "invoice_id": "RE-2025-40103",
+    "payment_date": "2025-03-30",
+    "amount": "12831.88",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900053",
+    "invoice_id": "RE-2025-40078",
+    "payment_date": "2025-08-20",
+    "amount": "18999.35",
+    "method": "card"
+   },
+   {
+    "payment_id": "900056",
+    "invoice_id": "RE-2025-40107",
+    "payment_date": "2025-06-04",
+    "amount": "3674.29",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900059",
+    "invoice_id": "RE-2025-40109",
+    "payment_date": "2025-03-02",
+    "amount": "12001.97",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900060",
+    "invoice_id": "RE-2025-40112",
+    "payment_date": "2025-05-21",
+    "amount": "9643.35",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900063",
+    "invoice_id": "RE-2025-40114",
+    "payment_date": "2025-10-07",
+    "amount": "3418.97",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900064",
+    "invoice_id": "RE-2025-40118",
+    "payment_date": "2025-09-25",
+    "amount": "16009.26",
+    "method": "check"
+   },
+   {
+    "payment_id": "900067",
+    "invoice_id": "RE-2025-40120",
+    "payment_date": "2025-05-11",
+    "amount": "22060.66",
+    "method": null
+   },
+   {
+    "payment_id": "900068",
+    "invoice_id": "RE-2025-40125",
+    "payment_date": "2025-03-16",
+    "amount": "20028.67",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900070",
+    "invoice_id": "RE-2025-40126",
+    "payment_date": "2025-11-26",
+    "amount": "7886.58",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900071",
+    "invoice_id": "RE-2025-40129",
+    "payment_date": "2025-08-15",
+    "amount": "24960.86",
+    "method": "check"
+   },
+   {
+    "payment_id": "900074",
+    "invoice_id": "RE-2025-40133",
+    "payment_date": "2025-09-10",
+    "amount": "11708.65",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900077",
+    "invoice_id": "RE-2025-40205",
+    "payment_date": "2025-12-28",
+    "amount": "23959.94",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900079",
+    "invoice_id": "RE-2025-40137",
+    "payment_date": "2025-10-10",
+    "amount": "24801.04",
+    "method": "card"
+   },
+   {
+    "payment_id": "900082",
+    "invoice_id": "RE-2025-40139",
+    "payment_date": "2025-08-16",
+    "amount": "5979.16",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900083",
+    "invoice_id": "RE-2025-40142",
+    "payment_date": "2025-12-15",
+    "amount": "7919.45",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900084",
+    "invoice_id": "RE-2025-40143",
+    "payment_date": "2025-11-08",
+    "amount": "14280.50",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900087",
+    "invoice_id": "RE-2025-40146",
+    "payment_date": "2025-07-06",
+    "amount": "11592.22",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900088",
+    "invoice_id": "RE-2025-40147",
+    "payment_date": "2025-06-21",
+    "amount": "15455.10",
+    "method": "card"
+   },
+   {
+    "payment_id": "900091",
+    "invoice_id": "RE-2025-40154",
+    "payment_date": "2025-09-09",
+    "amount": "3659.17",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900092",
+    "invoice_id": "RE-2025-40157",
+    "payment_date": "2025-07-12",
+    "amount": "21351.22",
+    "method": "check"
+   },
+   {
+    "payment_id": "900095",
+    "invoice_id": "RE-2025-40158",
+    "payment_date": "2025-08-24",
+    "amount": "4434.75",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900096",
+    "invoice_id": "RE-2025-40159",
+    "payment_date": "2025-06-04",
+    "amount": "13235.23",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900098",
+    "invoice_id": "RE-2025-40163",
+    "payment_date": "2025-05-31",
+    "amount": "17263.93",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900099",
+    "invoice_id": "RE-2025-40020",
+    "payment_date": "2025-12-08",
+    "amount": "11307.96",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900102",
+    "invoice_id": "RE-2025-40023",
+    "payment_date": "2025-02-18",
+    "amount": "5879.40",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900105",
+    "invoice_id": "RE-2025-40173",
+    "payment_date": "2025-06-06",
+    "amount": "19876.32",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900107",
+    "invoice_id": "RE-2025-40178",
+    "payment_date": "2025-05-06",
+    "amount": "24228.14",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900108",
+    "invoice_id": "RE-2025-40180",
+    "payment_date": "2025-04-17",
+    "amount": "15671.03",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900109",
+    "invoice_id": "RE-2025-40026",
+    "payment_date": "2025-08-20",
+    "amount": "12013.64",
+    "method": "card"
+   },
+   {
+    "payment_id": "900110",
+    "invoice_id": "RE-2025-40194",
+    "payment_date": "2025-10-15",
+    "amount": "18155.88",
+    "method": "check"
+   },
+   {
+    "payment_id": "900111",
+    "invoice_id": "RE-2025-40184",
+    "payment_date": "2025-05-10",
+    "amount": "111.32",
+    "method": "cash"
+   },
+   {
+    "payment_id": "900114",
+    "invoice_id": "RE-2025-40186",
+    "payment_date": "2025-08-26",
+    "amount": "10741.30",
+    "method": "check"
+   },
+   {
+    "payment_id": "900117",
+    "invoice_id": "RE-2025-40189",
+    "payment_date": "2025-08-16",
+    "amount": "24799.84",
+    "method": "check"
+   },
+   {
+    "payment_id": "900120",
+    "invoice_id": "RE-2025-40192",
+    "payment_date": "2025-05-23",
+    "amount": "5399.28",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900121",
+    "invoice_id": "RE-2025-40193",
+    "payment_date": "2025-05-30",
+    "amount": "9602.74",
+    "method": "wire"
+   },
+   {
+    "payment_id": "900124",
+    "invoice_id": "RE-2025-40194",
+    "payment_date": "2025-10-06",
+    "amount": "18155.88",
+    "method": "check"
+   },
+   {
+    "payment_id": "900125",
+    "invoice_id": "RE-2025-40198",
+    "payment_date": "2025-12-16",
+    "amount": "7627.11",
+    "method": "ach"
+   },
+   {
+    "payment_id": "900127",
+    "invoice_id": "RE-2025-40201",
+    "payment_date": "2025-12-29",
+    "amount": "4638.29",
+    "method": "check"
+   },
+   {
+    "payment_id": "900130",
+    "invoice_id": "RE-2025-40204",
+    "payment_date": "2025-06-05",
+    "amount": "21795.04",
+    "method": "card"
+   },
+   {
+    "payment_id": "900131",
+    "invoice_id": "RE-2025-40205",
+    "payment_date": "2025-12-02",
+    "amount": "23959.94",
+    "method": "card"
+   },
+   {
+    "payment_id": "900132",
+    "invoice_id": "RE-2025-40206",
+    "payment_date": "2025-03-08",
+    "amount": "14898.54",
+    "method": "card"
+   },
+   {
+    "payment_id": "900134",
+    "invoice_id": "RE-2025-40207",
+    "payment_date": "2025-10-25",
+    "amount": "8862.09",
+    "method": "check"
+   },
+   {
+    "payment_id": "920000",
+    "invoice_id": "RE-2025-60000",
+    "payment_date": "2025-04-14",
+    "amount": "4245.62",
+    "method": "check"
+   },
+   {
+    "payment_id": "920001",
+    "invoice_id": "RE-2025-40218",
+    "payment_date": "2025-04-01",
+    "amount": "22261.47",
+    "method": "wire"
+   },
+   {
+    "payment_id": "920002",
+    "invoice_id": "RE-2025-40065",
+    "payment_date": "2025-03-10",
+    "amount": "15841.78",
+    "method": "check"
+   },
+   {
+    "payment_id": "920003",
+    "invoice_id": "RE-2025-40216",
+    "payment_date": "2025-06-06",
+    "amount": "16380.23",
+    "method": "cash"
+   },
+   {
+    "payment_id": "920004",
+    "invoice_id": "RE-2025-40029",
+    "payment_date": "2025-09-02",
+    "amount": "17858.49",
+    "method": "card"
+   },
+   {
+    "payment_id": "920005",
+    "invoice_id": "RE-2025-60002",
+    "payment_date": "2025-03-30",
+    "amount": "13501.19",
+    "method": "ach"
+   },
+   {
+    "payment_id": "920006",
+    "invoice_id": "RE-2025-40028",
+    "payment_date": "2025-09-08",
+    "amount": "19038.23",
+    "method": "ach"
+   },
+   {
+    "payment_id": "920007",
+    "invoice_id": "RE-2025-40236",
+    "payment_date": "2025-11-15",
+    "amount": "11863.66",
+    "method": "card"
+   },
+   {
+    "payment_id": "920008",
+    "invoice_id": "RE-2025-40038",
+    "payment_date": "2025-04-14",
+    "amount": "3666.29",
+    "method": "cash"
+   }
+  ]
+ },
+ "expected_quarantine": {
+  "customer": [],
+  "invoice": [],
+  "payment": []
+ },
+ "events": []
+}

@@ -1,0 +1,6 @@
+# The generator, readers, mapper, drift detector, ingest ledger and evaluation use only the standard library.
+# These are for the charts and the tests:
+matplotlib>=3.8
+pytest>=8.0
+# Optional, off by default (the pipeline runs without it; the tests use a fake model):
+# anthropic>=0.40
